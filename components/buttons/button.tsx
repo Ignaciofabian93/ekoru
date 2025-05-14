@@ -2,7 +2,7 @@ import clsx from "clsx";
 
 type Button = {
   text: string;
-  onClick: () => void;
+  onClick?: () => void;
   className?: string;
   size?: "sm" | "md" | "lg" | "full";
   variant?: "primary" | "secondary" | "outline" | "text";
@@ -58,31 +58,20 @@ export default function Button({
     }
   };
 
-  // const getHeight = () => {
-  //   switch (size) {
-  //     case "sm":
-  //       return 32;
-  //     case "md":
-  //       return 48;
-  //     case "lg":
-  //       return 56;
-  //     default:
-  //       return 48;
-  //   }
-  // };
-
-  // const getFontSize = () => {
-  //   switch (size) {
-  //     case "small":
-  //       return 14;
-  //     case "medium":
-  //       return 16;
-  //     case "large":
-  //       return 18;
-  //     default:
-  //       return 16;
-  //   }
-  // };
+  const getFontSize = () => {
+    switch (size) {
+      case "sm":
+        return "text-sm";
+      case "md":
+        return "text-base";
+      case "lg":
+        return "text-lg";
+      case "full":
+        return "text-xl";
+      default:
+        return "text-base";
+    }
+  };
 
   const getSize = () => {
     switch (size) {
@@ -93,18 +82,19 @@ export default function Button({
       case "lg":
         return "w-3/4";
       case "full":
-        return "w-full";
+        return "w-10/12";
       default:
         return "w-1/2";
     }
   };
 
   className = clsx(
-    "min-w-[120px]",
+    "min-w-[120px] max-w-[350px]",
     getSize(),
     getBackgroundColor(),
     getTextColor(),
     getBorderColor(),
+    getFontSize(),
     "px-4 py-2",
     "rounded-full",
     "cursor-pointer",

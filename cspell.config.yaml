@@ -9,5 +9,8 @@ dictionaries:
 words:
   - ekoru
   - Linkedin
-ignoreWords: ["turbopack"]
+ignoreWords:
+  - linkedin
+  - turbopack
+  - youtube
 import: []
