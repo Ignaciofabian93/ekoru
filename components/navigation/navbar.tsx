@@ -9,10 +9,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 const navInfo = [
-  { name: "Inicio", href: "#inicio", icon: <House /> },
-  { name: "Nosotros", href: "#nosotros", icon: <Sprout /> },
-  { name: "Servicios", href: "#servicios", icon: <TabletSmartphone /> },
-  { name: "Contacto", href: "#contacto", icon: <Mail /> },
+  { name: "Inicio", href: "#inicio", icon: <House size={20} /> },
+  { name: "Nosotros", href: "#nosotros", icon: <Sprout size={20} /> },
+  { name: "Servicios", href: "#servicios", icon: <TabletSmartphone size={20} /> },
+  { name: "Contacto", href: "#contacto", icon: <Mail size={20} /> },
 ];
 
 const socialMedia = [
@@ -32,17 +32,17 @@ export default function Navbar() {
         "fixed top-0 w-full z-50 transition-all duration-300",
         "navbar-gradient",
         "backdrop-blur-lg",
-        "shadow-lg shadow-black/30"
+        "shadow-md shadow-black/30"
       )}
     >
-      <nav className={clsx("h-[80px] max-w-[800px]", "flex items-center justify-between", "px-4 mx-auto")}>
+      <nav className={clsx("h-[80px]", "flex items-center justify-between", "px-8 mx-auto")}>
         {/* Logo */}
         <a href="#inicio" className="flex items-center cursor-pointer">
           <Image src={logo} alt="logo ekoru" width={160} className="drop-shadow-xs drop-shadow-gray-700" priority />
         </a>
 
         {/* Nav Links */}
-        <ul className={clsx("hidden md:flex gap-8 text-[18px] font-medium")}>
+        <ul className={clsx("hidden md:flex gap-8")}>
           {navInfo.map(({ name, href, icon }) => (
             <li
               key={name}
@@ -50,9 +50,11 @@ export default function Navbar() {
                 "flex items-center justify-center",
                 "mx-1",
                 "gap-2",
-                "text-base",
-                "hover:text-gray transition-colors duration-300",
-                "text-shadow-md"
+                "text-base font-semibold",
+                "border-b-[1px] border-transparent",
+                "text-white",
+                "hover:text-primary-dark transition-colors duration-300",
+                "hover:border-b-[1px] hover:border-primary-dark"
               )}
             >
               {icon}
@@ -70,11 +72,7 @@ export default function Navbar() {
                 exit={{ rotate: 90, opacity: 0 }}
                 transition={{ duration: 0.3 }}
               >
-                <X
-                  className="text-primary drop-shadow-xs drop-shadow-gray-950 cursor-pointer"
-                  size={40}
-                  onClick={() => setIsOpened(false)}
-                />
+                <X className="text-white cursor-pointer" size={40} onClick={() => setIsOpened(false)} />
               </motion.div>
             ) : (
               <motion.div
@@ -84,11 +82,7 @@ export default function Navbar() {
                 exit={{ rotate: -90, opacity: 0 }}
                 transition={{ duration: 0.3 }}
               >
-                <Menu
-                  className="text-primary drop-shadow-xs drop-shadow-gray-950 cursor-pointer"
-                  size={40}
-                  onClick={() => setIsOpened(true)}
-                />
+                <Menu className="text-white cursor-pointer" size={40} onClick={() => setIsOpened(true)} />
               </motion.div>
             )}
           </AnimatePresence>
@@ -115,8 +109,7 @@ export default function Navbar() {
                 "mx-1",
                 "gap-2",
                 "text-base",
-                "hover:text-gray transition-colors duration-300",
-                "text-shadow-md"
+                "hover:text-gray transition-colors duration-300"
               )}
             >
               {icon}
