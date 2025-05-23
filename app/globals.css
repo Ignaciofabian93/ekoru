@@ -1,26 +1,21 @@
 @import "tailwindcss";
 
-/* --color-primary: #71b64a; */
-/* --color-accent: "#a7d88b"; */
-/* --color-gray: #7a7a7a;
-  --color-gray-background: #aaaaaa;
-  --color-disabled: #eee;
-  --color-white: #fff; */
-
 @theme {
   --color-primary: #71b64a;
   --color-primary-dark: #5d9c3a;
   --color-primary-light: #9cd270;
   --color-secondary: #ef9f4a;
   --color-accent: #4ab68a;
-
-  --text-muted: #777777;
-  --text-inverted: #ffffff;
+  --color-danger: #f44336;
+  --color-main: #1a1a1a;
+  --color-main-inverted: #f7f7f7;
+  --color-disabled: #9a9a9a;
+  --color-placeholder: #aaa;
 
   --color-background-page: #f5fdf4;
   --color-background-section: #eaf6e3;
   --color-background-card: #ffffff;
-  --color-subtle: #f0f9eb;
+  --color-subtle: #f7fede96;
 
   --color-border: #d1e1cb;
   --color-border-hover: #9cd270;
@@ -37,10 +32,8 @@ html {
 }
 
 body {
-  box-sizing: border-box;
   position: relative;
   z-index: 0;
-  max-width: 100dvw;
 }
 
 body::before {
@@ -50,7 +43,7 @@ body::before {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-image: url("/images/background.png");
+  background-image: url("/background.png");
   background-size: cover; /* or contain, or 100% 100% */
   background-repeat: no-repeat;
   background-position: center;
@@ -69,12 +62,12 @@ main {
   background-image: linear-gradient(90deg, #ffffff 0%, #9fc645 100%);
 }
 
-.footer-gradient {
+.sidebar-gradient {
   background-color: #ffffff;
   background-image: linear-gradient(180deg, #ffffff 0%, #9fc645 100%);
 }
 
-.sidebar-gradient {
+.footer-gradient {
   background-color: #ffffff;
-  background-image: linear-gradient(180deg, #ffffff 0%, #9fc645 100%);
+  background-image: linear-gradient(90deg, #ffffff 0%, #9fc645 100%);
 }
