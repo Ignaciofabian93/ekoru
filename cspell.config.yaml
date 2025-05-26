@@ -11,6 +11,7 @@ words:
   - ekoru
   - Linkedin
 ignoreWords:
+  - PROXIMAMENTE
   - linkedin
   - turbopack
   - youtube
