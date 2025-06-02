@@ -1,12 +1,24 @@
 import clsx from "clsx";
+import Link from "next/link";
 
 type Button = React.ComponentProps<"button"> & {
   text: string;
   variant?: "primary" | "secondary" | "danger";
   size?: "sm" | "md" | "lg" | "full";
+  as?: "submit" | "button" | "link";
+  href?: string;
 };
 
-export default function Button({ text, onClick, className, variant = "primary", size = "full", ...rest }: Button) {
+export default function Button({
+  text,
+  onClick,
+  className,
+  variant = "primary",
+  size = "full",
+  as = "button",
+  href,
+  ...rest
+}: Button) {
   className = clsx(
     "min-w-[120px]",
     "flex items-center justify-center",
@@ -27,7 +39,11 @@ export default function Button({ text, onClick, className, variant = "primary", 
     },
     className
   );
-  return (
+  return as === "link" ? (
+    <Link href={href as string} target="_blank" className={className}>
+      {text}
+    </Link>
+  ) : (
     <button onClick={onClick} className={className} {...rest}>
       {text}
     </button>

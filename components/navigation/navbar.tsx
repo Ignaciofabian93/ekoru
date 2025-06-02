@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { Menu, Store, CircleDollarSign, Briefcase, BookText, Users, Home } from "lucide-react";
+import { Menu, Briefcase, BookText, Users, Home, CircleDollarSign, Store } from "lucide-react";
 import Image from "next/image";
 import clsx from "clsx";
 import Button from "../buttons/button";
@@ -34,8 +34,48 @@ const SideLink = ({
   );
 };
 
+const NavItem = ({
+  title,
+  href,
+  selected,
+  onClick,
+}: {
+  title: string;
+  href: string;
+  selected: boolean;
+  onClick: () => void;
+}) => {
+  return (
+    <a href={href} className="flex mx-4" onClick={onClick}>
+      <li
+        className={clsx(
+          "relative text-base cursor-pointer pb-[4px] transition-all ease-in-out duration-300",
+          "after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-white",
+          "after:scale-x-0 after:transition-transform after:duration-300",
+          { "after:scale-x-100": selected }
+        )}
+      >
+        <span>{title}</span>
+      </li>
+    </a>
+  );
+};
+
+type NavMenu = {
+  id: string;
+  title: string;
+  href: string;
+};
+const NavMenu: NavMenu[] = [
+  { id: "Home", title: "Inicio", href: "#home" },
+  { id: "Ekoru", title: "Ekoru", href: "#ekoru" },
+  { id: "About", title: "Nosotros", href: "#about" },
+  { id: "Contact", title: "Contacto", href: "#contact" },
+];
+
 export default function Navbar() {
   const [isSideNavOpened, setIsSideNavOpened] = useState<boolean>(false);
+  const [itemSelected, setItemSelected] = useState<NavMenu>(NavMenu[0]);
   const router = useRouter();
 
   const brandClick = () => {
@@ -48,23 +88,30 @@ export default function Navbar() {
     <header className={clsx("w-full", "fixed top-0 left-0 z-[99]", "navbar-gradient shadow-sm shadow-primary")}>
       <nav
         className={clsx(
-          "w-full h-[80px] max-w-[1600px] flex items-center justify-between px-4 md:px-8 gap-4 mx-auto",
+          "w-full h-[80px] max-w-[1600px] flex items-center justify-center px-4 md:px-8 gap-4 mx-auto",
           "text-white"
         )}
       >
-        {/* LEFT SIDE - MENU & LOGO */}
-        <div className="flex items-center justify-between">
-          <Menu onClick={handleSideNav} className="cursor-pointer md:hidden text-primary" size={30} />
-          <div
-            className="hidden md:flex w-[140px] h-[90%] items-center justify-center cursor-pointer"
-            onClick={brandClick}
-          >
+        {/* LEFT SIDE */}
+        <div className="w-full flex items-center justify-center md:justify-start relative">
+          <Menu onClick={handleSideNav} className="absolute left-0 cursor-pointer md:hidden text-primary" size={30} />
+          <div className="md:flex w-[140px] h-[90%] items-center cursor-pointer" onClick={brandClick}>
             <Image src={"/images/logo.png"} alt="Logo Ekoru" width={4096} height={996} />
           </div>
         </div>
 
-        {/* RIGHT SIDE - USER & CART */}
-        <div className="flex items-center justify-between"></div>
+        {/* RIGHT SIDE */}
+        <div className="hidden md:flex items-center justify-between">
+          {NavMenu.map((item) => (
+            <NavItem
+              key={item.id}
+              title={item.title}
+              href={item.href}
+              selected={itemSelected.id === item.id}
+              onClick={() => setItemSelected(item)}
+            />
+          ))}
+        </div>
       </nav>
 
       {isSideNavOpened && (

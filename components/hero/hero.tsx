@@ -2,11 +2,10 @@
 import { motion } from "motion/react";
 import clsx from "clsx";
 import Button from "../buttons/button";
-import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section id="inicio" className={clsx("w-full max-w-screen h-[calc(100vh_-_40px)]", "relative", "overflow-hidden")}>
+    <section id="home" className={clsx("w-full max-w-screen h-[calc(100vh_-_40px)]", "relative", "overflow-hidden")}>
       <div
         className={clsx(
           "absolute inset-0",
@@ -46,15 +45,8 @@ export default function Hero() {
           transition={{ delay: 1, duration: 0.5 }}
           className="flex flex-col items-center justify-center w-full"
         >
-          <Link
-            href="https://app.ekoru.cl"
-            target="_blank"
-            className="w-10/12 min-w-[120px] max-w-[350px] flex items-center justify-center"
-          >
-            <Button text="Ir a la APP" className="mt-8" size="full" />
-          </Link>
-          <div className="w-10/12 min-w-[120px] max-w-[350px] flex items-center justify-center">
-            <Button text="Contacto" size="full" variant="secondary" className="mt-4" />
+          <div className="w-10/12 min-w-[120px] max-w-[350px] flex items-center justify-center mt-6">
+            <Button text="Contáctanos" size="full" variant="primary" className="mt-4" />
           </div>
         </motion.div>
       </div>
