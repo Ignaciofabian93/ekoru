@@ -112,7 +112,7 @@ export default function Navbar() {
         <div className={clsx("w-full h-full", "px-4 py-6", "flex flex-col items-start justify-between")}>
           <div className="flex items-center justify-center w-full h-1/12">
             <div className="w-[80%] flex items-center justify-center cursor-pointer" onClick={brandClick}>
-              <Image src={"/images/logo.png"} alt="Logo Ekoru" width={4096} height={996} />
+              <Image src={"/images/logo.webp"} alt="Logo Ekoru" width={4096} height={996} />
             </div>
           </div>
 

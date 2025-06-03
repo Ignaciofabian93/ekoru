@@ -50,7 +50,7 @@ export default function Footer() {
         <div className="flex flex-col items-center justify-center">
           <div className="w-48 md:w-56 mb-4">
             <Image
-              src="/images/logo.png"
+              src="/images/logo.webp"
               alt="Ekoru Logo"
               width={4096}
               height={996}
