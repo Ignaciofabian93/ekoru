@@ -5,34 +5,45 @@ import Footer from "@/components/footer/footer";
 import Hero from "@/components/hero/hero";
 import ScreenWrapper from "@/components/screen/screenWrapper";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const InfoSection = ({ id, children }: { id: string; children: React.ReactNode }) => {
   return (
-    <section id={id}>
-      <div className="w-full h-full px-4 py-6 flex flex-col items-start justify-between">{children}</div>
+    <section id={id} className="w-full py-12 px-4">
+      <div className="max-w-[1200px] mx-auto flex flex-col gap-8 items-center justify-between">{children}</div>
     </section>
   );
 };
 
 const SectionTitle = ({ title, subTitle }: { title: string; subTitle: string }) => {
   return (
-    <div className="w-full max-w-[1100px] mx-auto border-[4px] border-primary rounded-[11px] flex flex-col items-center justify-center px-4 py-4 text-center mb-8 backdrop-blur-2xl">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      className="w-full max-w-[1100px] mx-auto border-[4px] bg-white border-primary rounded-[12px] flex flex-col items-center justify-center px-6 py-6 text-center mb-8 shadow-md"
+    >
       <div className="flex items-center justify-center gap-4 mb-2">
-        <div className="w-[10px] h-[10px] rounded-full bg-primary" />
-        <h3 className="text-sm md:text-lg lg:text-xl font-semibold uppercase">{title}</h3>
-        <div className="w-[10px] h-[10px] rounded-full bg-primary" />
+        <div className="w-[12px] h-[12px] rounded-full bg-primary" />
+        <h3 className="text-lg md:text-xl lg:text-2xl font-semibold uppercase tracking-wide">{title}</h3>
+        <div className="w-[12px] h-[12px] rounded-full bg-primary" />
       </div>
-      <p className="text-xs md:text-base lg:text-md">{subTitle}</p>
-    </div>
+      <p className="text-sm md:text-base text-muted-foreground font-medium">{subTitle}</p>
+    </motion.div>
   );
 };
 
 const AboutSection = ({ title, children }: { title: string; children: React.ReactNode }) => {
   return (
-    <div className="w-full max-w-[1100px] mx-auto flex flex-col items-center justify-center mb-8">
-      <h2 className="text-3xl text-primary font-semibold mb-4">{title}</h2>
-      <div className="w-full text-base flex flex-col items-center justify-center text-center">{children}</div>
-    </div>
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="w-full max-w-[1000px] mx-auto flex flex-col items-center justify-center text-center gap-4 mb-12"
+    >
+      <h2 className="text-2xl lg:text-3xl text-primary font-bold mb-2">{title}</h2>
+      <div className="text-base text-main leading-relaxed space-y-2">{children}</div>
+    </motion.div>
   );
 };
 
@@ -54,33 +65,28 @@ const WorkerInfo = ({
   analogy: string;
 }) => {
   return (
-    <div className="w-full max-w-[400px] h-[650px] flex flex-col items-center justify-start px-4 py-8">
-      <div className="w-full flex items-center justify-center mb-4">
-        {photo ? (
-          <Image
-            src={photo}
-            alt={name}
-            width={200}
-            height={200}
-            className="w-[200px] h-[200px] rounded-full object-cover"
-          />
-        ) : (
-          <div className="w-[200px] h-[200px] rounded-full bg-primary" />
-        )}
-      </div>
-      <div className="w-full text-left mb-4">
-        <h5 className="text-xl font-semibold">{name}</h5>
-        <span className="text-sm">{description}</span>
-      </div>
-      <div className="w-full text-left">
-        <h6 className="text-base font-semibold">{subtitle}</h6>
-        <span className="text-sm italic">&quot;{phrase}&quot;</span>
-        <p className="mt-4 text-base">{text}</p>
-        <p className="text-base">
-          Si <strong>EKORU</strong> {analogy}
-        </p>
-      </div>
-    </div>
+    <motion.div
+      initial={{ opacity: 0, scale: 0.9 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.4 }}
+      className="max-w-[360px] h-[600px] bg-white rounded-xl shadow-lg p-6 mb-8 flex flex-col items-center text-left hover:shadow-2xl transition-all duration-300"
+    >
+      <Image
+        src={photo || "/default-avatar.png"}
+        alt={name}
+        width={180}
+        height={180}
+        className="rounded-full object-cover mb-4"
+      />
+      <h5 className="text-xl font-semibold text-primary mb-1">{name}</h5>
+      <p className="text-sm text-muted-foreground mb-2 italic">{description}</p>
+      <h6 className="text-base font-semibold mt-4 mb-1">{subtitle}</h6>
+      <p className="text-sm italic text-gray-500 mb-2">&quot;{phrase}&quot;</p>
+      <p className="text-sm mb-2 leading-relaxed">{text}</p>
+      <p className="text-sm">
+        Si <strong>EKORU</strong> {analogy}
+      </p>
+    </motion.div>
   );
 };
 
@@ -161,7 +167,7 @@ export default function Home() {
               Y estos somos nosotros, los que le están metiendo alma, tiempo y pasión para que esto circule de verdad.
             </p>
           </div>
-          <div className="w-full flex flex-wrap items-center justify-evenly">
+          <div className="w-full flex flex-wrap items-center justify-evenly gap-8 mt-8">
             <WorkerInfo
               photo="/images/brandIcon.webp"
               name="Jorge Conejeros"
