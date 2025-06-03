@@ -47,6 +47,7 @@ const NavMenu: NavMenu[] = [
   { id: "Home", title: "Inicio", href: "#home" },
   { id: "Ekoru", title: "Ekoru", href: "#ekoru" },
   { id: "About", title: "Nosotros", href: "#about" },
+  { id: "Services", title: "Servicios", href: "#services" },
   { id: "Contact", title: "Contacto", href: "#contact" },
 ];
 
@@ -73,7 +74,7 @@ export default function Navbar() {
         <div className="w-full flex items-center justify-center md:justify-start relative">
           <Menu onClick={handleSideNav} className="absolute left-0 cursor-pointer md:hidden text-primary" size={30} />
           <div className="md:flex w-[140px] h-[90%] items-center cursor-pointer" onClick={brandClick}>
-            <Image src={"/images/logo.png"} alt="Logo Ekoru" width={4096} height={996} />
+            <Image src={"/images/logo.webp"} alt="Logo Ekoru" width={4096} height={996} priority />
           </div>
         </div>
 
@@ -122,13 +123,16 @@ export default function Navbar() {
                 title={item.title}
                 href={item.href}
                 selected={itemSelected.id === item.id}
-                onClick={() => setItemSelected(item)}
+                onClick={() => {
+                  setItemSelected(item);
+                  setIsSideNavOpened(false);
+                }}
               />
             ))}
           </SideArticle>
 
           <SideArticle className="h-1/12">
-            <Button text="Ir a la App" onClick={() => {}} variant="primary" size="full" />
+            <Button text="Ir a la App" variant="primary" size="full" as="link" href="https://app.ekoru.cl" newTab />
           </SideArticle>
         </div>
       </aside>
