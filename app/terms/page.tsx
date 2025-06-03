@@ -5,6 +5,32 @@ export default function TerminosYCondiciones() {
     <div>
       <Head>
         <title>Términos y Condiciones | EKORU</title>
+        <meta
+          name="description"
+          content="Consulta los términos y condiciones de uso del sitio EKORU. Lee nuestras políticas antes de comprar productos sustentables."
+        />
+        <meta
+          name="keywords"
+          content="términos y condiciones, EKORU, políticas de uso, venta sustentable, ecommerce ecológico"
+        />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://ekoru.cl/terms" />
+        {/* Open Graph */}
+        <meta property="og:title" content="Términos y Condiciones | EKORU" />
+        <meta
+          property="og:description"
+          content="Consulta las condiciones de uso de EKORU, tu tienda online de productos sustentables."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ekoru.cl/terminos-y-condiciones" />
+        <meta property="og:site_name" content="EKORU" />
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Términos y Condiciones | EKORU" />
+        <meta
+          name="twitter:description"
+          content="Consulta las condiciones de uso de EKORU, tu tienda online de productos sustentables."
+        />
       </Head>
       <main className="max-w-4xl mx-auto px-4 py-10">
         <h1 className="text-3xl font-bold mb-6">Términos y Condiciones</h1>
