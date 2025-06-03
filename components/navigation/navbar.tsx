@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { Menu, Briefcase, BookText, Users, Home, CircleDollarSign, Store } from "lucide-react";
+import { Menu } from "lucide-react";
 import Image from "next/image";
 import clsx from "clsx";
 import Button from "../buttons/button";
@@ -9,29 +9,6 @@ import Button from "../buttons/button";
 const SideArticle = ({ children, className }: { children: React.ReactNode; className?: string }) => {
   className = clsx("w-full flex flex-col items-start justify-start", className);
   return <article className={className}>{children}</article>;
-};
-
-const SideLink = ({
-  children,
-  onClick,
-  className,
-  disabled = false,
-}: {
-  children: React.ReactNode;
-  onClick: () => void;
-  className?: string;
-  disabled?: boolean;
-}) => {
-  className = clsx(
-    "w-full h-[50px] flex items-center justify-start gap-4 cursor-pointer",
-    { "text-disabled": disabled },
-    className
-  );
-  return (
-    <div onClick={onClick} className={className}>
-      {children}
-    </div>
-  );
 };
 
 const NavItem = ({
@@ -49,7 +26,7 @@ const NavItem = ({
     <a href={href} className="flex mx-4" onClick={onClick}>
       <li
         className={clsx(
-          "relative text-base cursor-pointer pb-[4px] transition-all ease-in-out duration-300",
+          "relative text-xl font-semibold mb-4 md:mb-0 md:text-base text-primary md:text-white cursor-pointer pb-[4px] transition-all ease-in-out duration-300",
           "after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-white",
           "after:scale-x-0 after:transition-transform after:duration-300",
           { "after:scale-x-100": selected }
@@ -139,30 +116,15 @@ export default function Navbar() {
           </div>
 
           <SideArticle className="h-7/12">
-            <SideLink onClick={() => router.push("/feed")}>
-              <Home />
-              <p className="font-semibold">Inicio</p>
-            </SideLink>
-            <SideLink onClick={() => router.push("/market")}>
-              <CircleDollarSign />
-              <p className="font-semibold">Mercado</p>
-            </SideLink>
-            <SideLink onClick={() => router.push("/stores")}>
-              <Store />
-              <p className="font-semibold">Tiendas</p>
-            </SideLink>
-            <SideLink onClick={() => router.push("/services")} disabled>
-              <Briefcase />
-              <p className="font-semibold">Servicios</p>
-            </SideLink>
-            <SideLink onClick={() => router.push("/services")} disabled>
-              <Users />
-              <p className="font-semibold">Comunidad</p>
-            </SideLink>
-            <SideLink onClick={() => router.push("/services")} disabled>
-              <BookText />
-              <p className="font-semibold">Cultura</p>
-            </SideLink>
+            {NavMenu.map((item) => (
+              <NavItem
+                key={item.id}
+                title={item.title}
+                href={item.href}
+                selected={itemSelected.id === item.id}
+                onClick={() => setItemSelected(item)}
+              />
+            ))}
           </SideArticle>
 
           <SideArticle className="h-1/12">

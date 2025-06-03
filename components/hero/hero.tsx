@@ -46,7 +46,15 @@ export default function Hero() {
           className="flex flex-col items-center justify-center w-full"
         >
           <div className="w-10/12 min-w-[120px] max-w-[350px] flex items-center justify-center mt-6">
-            <Button text="Contáctanos" size="full" variant="primary" className="mt-4" />
+            <Button
+              text="Contáctanos"
+              size="full"
+              variant="primary"
+              className="mt-4"
+              as="link"
+              href="#contact"
+              newTab={false}
+            />
           </div>
         </motion.div>
       </div>

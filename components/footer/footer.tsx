@@ -1,6 +1,12 @@
 import clsx from "clsx";
 import Image from "next/image";
-import { FacebookIcon, InstagramIcon, XIcon, YouTubeIcon, LinkedinIcon } from "@/assets/icons";
+import {
+  // FacebookIcon,
+  InstagramIcon,
+  // XIcon,
+  // YouTubeIcon,
+  LinkedinIcon,
+} from "@/assets/icons";
 import Link from "next/link";
 
 const IconLink = ({ children, url }: { children: React.ReactNode; url: string }) => {
@@ -68,13 +74,13 @@ export default function Footer() {
           </Link>
           <p className="text-main text-base font-semibold mb-2">Síguenos en nuestras redes sociales:</p>
           <div className="flex justify-center gap-4">
-            <IconLink url="">
+            {/* <IconLink url="">
               <FacebookIcon
                 width={36}
                 height={36}
                 className="hover:scale-125 transition-transform ease-in-out duration-300"
               />
-            </IconLink>
+            </IconLink> */}
             <IconLink url="https://www.instagram.com/ekoru_chile?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
               <InstagramIcon
                 width={36}
@@ -82,16 +88,16 @@ export default function Footer() {
                 className="hover:scale-125 transition-transform ease-in-out duration-300"
               />
             </IconLink>
-            <IconLink url="">
+            {/* <IconLink url="">
               <XIcon width={36} height={36} className="hover:scale-125 transition-transform ease-in-out duration-300" />
-            </IconLink>
-            <IconLink url="">
+            </IconLink> */}
+            {/* <IconLink url="">
               <YouTubeIcon
                 width={36}
                 height={36}
                 className="hover:scale-125 transition-transform ease-in-out duration-300"
               />
-            </IconLink>
+            </IconLink> */}
             <IconLink url="https://www.linkedin.com/company/ekoru-chile/">
               <LinkedinIcon
                 width={36}
@@ -103,7 +109,7 @@ export default function Footer() {
         </div>
       </section>
       <nav className="mt-6 flex flex-wrap justify-center gap-4 text-sm font-semibold text-main">
-        <Link href="/about">Quiénes Somos</Link>
+        <Link href="#about">Quiénes Somos</Link>
         <Link href="/privacy">Política de Privacidad</Link>
         <Link href="/terms">Términos y Condiciones</Link>
       </nav>

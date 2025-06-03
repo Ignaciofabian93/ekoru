@@ -1,5 +1,6 @@
 "use client";
 import Button from "@/components/buttons/button";
+import Form from "@/components/contact/form";
 import Footer from "@/components/footer/footer";
 import Hero from "@/components/hero/hero";
 import ScreenWrapper from "@/components/screen/screenWrapper";
@@ -212,6 +213,7 @@ export default function Home() {
           title="Contáctanos"
           subTitle="Si tienes preguntas no dudes en escribirnos. Tu opinión nos importa"
         />
+        <Form />
       </InfoSection>
       <Footer />
     </ScreenWrapper>

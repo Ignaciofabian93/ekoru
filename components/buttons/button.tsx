@@ -7,6 +7,7 @@ type Button = React.ComponentProps<"button"> & {
   size?: "sm" | "md" | "lg" | "full";
   as?: "submit" | "button" | "link";
   href?: string;
+  newTab?: boolean;
 };
 
 export default function Button({
@@ -17,6 +18,7 @@ export default function Button({
   size = "full",
   as = "button",
   href,
+  newTab = false,
   ...rest
 }: Button) {
   className = clsx(
@@ -25,7 +27,10 @@ export default function Button({
     "rounded-full",
     "font-semibold",
     "disabled:opacity-50",
+    "cursor-pointer",
     "disabled:cursor-not-allowed",
+    "hover:brightness-115",
+    "transition-color ease-in-out duration-300",
     {
       "w-full py-2": size === "full",
       "w-[80%] py-2": size === "lg",
@@ -40,7 +45,7 @@ export default function Button({
     className
   );
   return as === "link" ? (
-    <Link href={href as string} target="_blank" className={className}>
+    <Link href={href as string} target={newTab ? "_blank" : "_self"} className={className}>
       {text}
     </Link>
   ) : (

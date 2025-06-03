@@ -50,6 +50,7 @@ body::before {
   opacity: 0.03; /* Set desired transparency */
   z-index: -1;
   pointer-events: none;
+  filter: blur(3px);
 }
 
 main {
