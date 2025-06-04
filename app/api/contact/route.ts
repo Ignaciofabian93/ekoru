@@ -7,6 +7,9 @@ export async function POST(req: Request) {
   if (!name || !email || !message) {
     return NextResponse.json({ error: "Todos los campos son requeridos" }, { status: 400 });
   }
+  const emailUser = process.env.EMAIL_USER;
+  const emailPass = process.env.EMAIL_PASS;
+  const emailTo = process.env.EMAIL_TO;
 
   try {
     const transporter = nodemailer.createTransport({
@@ -14,14 +17,14 @@ export async function POST(req: Request) {
       port: 587,
       secure: false,
       auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
+        user: emailUser,
+        pass: emailPass,
       },
     });
 
     await transporter.sendMail({
-      from: `"Contacto Ekoru" <${process.env.EMAIL_USER}>`,
-      to: process.env.EMAIL_TO, // tu correo personal o el de la empresa
+      from: `"Contacto Ekoru" <${emailUser?.toLowerCase()}>`,
+      to: emailTo,
       subject: `Nuevo mensaje de ${name}`,
       html: `
         <p><strong>Nombre:</strong> ${name}</p>
