@@ -227,7 +227,7 @@ export default function Home() {
           </div>
           <div className="w-full flex flex-wrap items-center justify-evenly gap-8 mt-8">
             <WorkerInfo
-              photo="/images/brandIcon.webp"
+              photo="/images/jorge.webp"
               name="Jorge Conejeros"
               description="Tiene mil notas con cosas que 'podrían funcionar'."
               subtitle="Conector con propósito"
@@ -236,7 +236,7 @@ export default function Home() {
               analogy="fuera una fogata, Jorge sería quien trae los primeros palitos, y quien reúne a todos"
             />
             <WorkerInfo
-              photo="/images/brandIcon.webp"
+              photo="/images/ignacio.webp"
               name="Ignacio Rodríguez"
               description="Fan del café y de los bugs difíciles"
               subtitle="Mago de las teclas"
@@ -245,7 +245,7 @@ export default function Home() {
               analogy="fuera una bicicleta circular, Ignacio sería la cadena y también el que la engrasa."
             />
             <WorkerInfo
-              photo="/images/brandIcon.webp"
+              photo="/images/sebastian.webp"
               name="Sebastián Muñoz"
               description="Habla con compost como si fueran colegas."
               subtitle="Embajador de los árboles"
