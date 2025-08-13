@@ -9,17 +9,20 @@ const heroImage = "/hero-image.jpg";
 
 export default function Hero() {
   return (
-    <section
-      className="relative flex flex-col items-center justify-center min-h-[80vh] w-full text-center px-4 py-12"
-      style={{
-        backgroundImage: `url(${heroImage})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
-    >
-      <div className="absolute inset-0 bg-black/40 pointer-events-none z-0" />
-      <div className="relative z-10 w-full flex flex-col items-center">
+    <section className="relative flex flex-col items-center justify-center min-h-[80vh] w-full text-center px-4 py-12 overflow-hidden">
+      {/* Responsive background image */}
+      <Image
+        src={heroImage}
+        alt="Hero Image"
+        fill
+        sizes="100vw"
+        className="absolute inset-0 w-full h-full object-cover z-0"
+        priority
+      />
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/40 pointer-events-none z-10" />
+      {/* Content */}
+      <div className="relative z-20 w-full flex flex-col items-center">
         <Image
           src={ekoruLogo}
           alt="Ekoru Logo"

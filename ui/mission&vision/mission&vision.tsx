@@ -99,7 +99,7 @@ export default function MissionAndVision() {
           title="NO FUE UNA IDEA. FUE UNA INQUIETUD"
           description="Donde muchos vieron problemas, nosotros vimos una semilla"
         />
-        <p className="w-8/12 mx-auto text-gray-800 font-light space-y-6 text-lg leading-relaxed my-12">
+        <p className="w-11/12 md:w-8/12 mx-auto text-gray-800 font-light space-y-6 leading-relaxed my-12">
           <span className="font-semibold text-primary">
             EKORU no nació de una idea brillante, nació de una incomodidad real,
           </span>{" "}

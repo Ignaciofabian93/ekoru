@@ -68,7 +68,7 @@ export default function Contact() {
           description="Pregúntanos, propón, súmate o desahógate... ¡todo suma!"
           variant="outlined"
         />
-        <p className="text-lg text-gray-800 font-light my-8 text-center">
+        <p className="text-gray-800 font-light my-8 text-center">
           Para ideas que suman, preguntas que inspiran o mensajes que quieren
           ser escuchados. Completa tus datos y prometemos responderte con
           atención, cariño y circularidad.
@@ -79,7 +79,7 @@ export default function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="w-full max-w-[500px] mx-auto p-8 rounded-2xl shadow-lg bg-white/80 backdrop-blur border border-gray-100 flex flex-col gap-6"
+          className="w-full max-w-[500px] mx-auto p-4 md:p-8 rounded-2xl shadow-lg bg-white/80 backdrop-blur border border-gray-100 flex flex-col gap-6"
         >
           <Input
             label="¿Cuál es tu nombre?"

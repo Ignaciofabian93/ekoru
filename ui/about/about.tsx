@@ -15,7 +15,7 @@ export default function About() {
         variant="outlined"
       />
       <div className="w-full flex flex-col md:flex-row items-start justify-center px-4 py-8 gap-8">
-        <div className="w-1/2 flex justify-center mx-auto">
+        <div className="w-full md:w-1/2 flex justify-center mx-auto">
           <Image
             src={sectionImage}
             alt="Celulares"
@@ -28,7 +28,7 @@ export default function About() {
           <h2 className="text-3xl font-bold mb-4 text-primary">
             ¿Qué es EKORU?
           </h2>
-          <p className="text-lg leading-relaxed">
+          <p className="leading-relaxed">
             <span className="font-semibold text-primary">EKORU</span> es mucho
             más que una app: es una nueva forma de habitar el consumo. Una
             plataforma que te permite{" "}
@@ -40,7 +40,7 @@ export default function About() {
             cada decisión cotidiana puede sumar a un planeta más sano y una
             comunidad más despierta.
           </p>
-          <p className="text-lg leading-relaxed">
+          <p className="leading-relaxed">
             Aquí no solo conectas con objetos,{" "}
             <span className="font-semibold text-primary">
               conectas con historias
@@ -50,7 +50,7 @@ export default function About() {
             . Y no solo haces impacto,{" "}
             <span className="font-semibold text-primary">lo compartes</span>.
           </p>
-          <p className="text-lg leading-relaxed italic">
+          <p className="leading-relaxed italic">
             EKORU es circularidad, es economía, es comunidad, y no giramos en
             círculos,{" "}
             <span className="font-semibold text-primary">
