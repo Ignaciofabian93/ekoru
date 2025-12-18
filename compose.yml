@@ -14,11 +14,11 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.5" # Maximum 0.5 CPU core (low traffic informative site)
-          memory: 256M # Maximum 256MB RAM
+          cpus: "1.0" # Maximum 1 CPU core
+          memory: 512M # Maximum 512MB RAM
         reservations:
-          cpus: "0.1" # Minimum 0.1 CPU cores reserved
-          memory: 128M # Minimum 128MB RAM reserved
+          cpus: "0.5" # Minimum 0.5 CPU cores reserved
+          memory: 256M # Minimum 256MB RAM reserved
     healthcheck:
       test:
         [
