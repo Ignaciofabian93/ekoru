@@ -1,15 +1,38 @@
-FROM node:22
+# Build stage
+FROM node:22-alpine AS builder
 
 WORKDIR /app
 
-COPY package.json .
+COPY package.json ./
 
-RUN npm install
+COPY package-lock.json ./
+
+RUN npm ci
 
 COPY . .
 
+# Build the application
 RUN npm run build
 
-EXPOSE 3000
+# Production stage
+FROM node:22-alpine
+
+# Install OpenSSL for Prisma
+RUN apk add --no-cache openssl
+
+WORKDIR /app
+
+# Copy package files
+COPY package.json ./
+
+COPY package-lock.json ./
+
+# Install only production dependencies
+RUN npm ci --only=production
+
+# Copy built application from builder stage
+COPY --from=builder /app/dist ./dist
 
 CMD [ "npm", "start" ]
+
+EXPOSE 3000

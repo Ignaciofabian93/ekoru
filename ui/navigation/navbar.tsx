@@ -1,16 +1,44 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowDown, Menu } from "lucide-react";
+import { ArrowDown, Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { laws } from "@/constants/laws";
 
+const navItems = [
+  { id: "who-we-are", label: "¿EKORU?" },
+  { id: "features", label: "Funcionalidades" },
+  { id: "mission&vision", label: "Misión y Visión" },
+  { id: "team", label: "Equipo" },
+  { id: "contact", label: "Contacto" },
+];
+
 export default function Navbar() {
   const [openAccordion, setOpenAccordion] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
 
-  // SPA scroll to section and close mobile menu
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    navItems.forEach(({ id }) => {
+      const element = document.getElementById(id);
+      if (element) observer.observe(element);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   const handleScrollToSection = (sectionId: string) => {
     setIsMobileMenuOpen(false);
     setTimeout(() => {
@@ -23,67 +51,83 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="bg-gradient-to-r from-primary-light via-primary to-primary-dark shadow-md border-b border-neutral/20 sticky top-0 z-50">
+      <motion.header
+        initial={{ y: -100 }}
+        animate={{ y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="bg-gradient-to-r from-primary-light via-primary to-primary-dark shadow-md border-b border-neutral/20 sticky top-0 z-50 backdrop-blur-sm"
+      >
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
-            <div className="flex-shrink-0">
-              <Link href="/feed" className="flex items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="flex-shrink-0"
+            >
+              <Link href="/" className="flex items-center">
                 <Image
                   src="/brand/logo.webp"
                   alt="EKORU"
                   width={100}
                   height={50}
-                  className="h-full max-h-[50px] w-auto drop-shadow-xs drop-shadow-slate-900/20"
+                  className="h-full max-h-[50px] w-auto drop-shadow-lg"
                 />
               </Link>
-            </div>
-            {/* Company Info Menu (Desktop) */}
+            </motion.div>
+
+            {/* Desktop Navigation */}
             <div className="hidden md:flex flex-1 max-w-2xl mx-4 items-center justify-end space-x-6">
-              <a
-                href="#who-we-are"
-                className="text-white hover:underline transition-all duration-200 ease-in-out font-medium"
-              >
-                ¿EKORU?
-              </a>
-              <a
-                href="#features"
-                className="text-white hover:underline transition-all duration-200 ease-in-out font-medium"
-              >
-                Funcionalidades
-              </a>
-              <a
-                href="#mission&vision"
-                className="text-white hover:underline transition-all duration-200 ease-in-out font-medium"
-              >
-                Misión y Visión
-              </a>
-              <a
-                href="#team"
-                className="text-white hover:underline transition-all duration-200 ease-in-out font-medium"
-              >
-                Equipo
-              </a>
-              <a
-                href="#contact"
-                className="text-white hover:underline transition-all duration-200 ease-in-out font-medium"
-              >
-                Contacto
-              </a>
+              {navItems.map((item, index) => (
+                <motion.a
+                  key={item.id}
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
+                  href={`#${item.id}`}
+                  className={`relative text-white hover:text-primary-light transition-all duration-200 ease-in-out font-medium text-sm group ${
+                    activeSection === item.id ? "text-primary-light" : ""
+                  }`}
+                >
+                  {item.label}
+                  <motion.span
+                    initial={{ scaleX: 0 }}
+                    animate={{
+                      scaleX: activeSection === item.id ? 1 : 0,
+                    }}
+                    transition={{ duration: 0.3 }}
+                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary-light origin-left"
+                  />
+                  <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-white scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
+                </motion.a>
+              ))}
             </div>
+
             {/* Mobile Menu Button */}
-            <div className="md:hidden flex items-center space-x-2">
-              <button
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="md:hidden flex items-center"
+            >
+              <motion.button
+                whileTap={{ scale: 0.95 }}
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="md:hidden p-2 text-white hover:text-primary transition-colors duration-200"
+                className="p-2 text-white hover:text-primary-light transition-colors duration-200"
                 aria-label="Toggle menu"
               >
-                <Menu className="h-6 w-6" />
-              </button>
-            </div>
+                {isMobileMenuOpen ? (
+                  <X className="h-6 w-6" />
+                ) : (
+                  <Menu className="h-6 w-6" />
+                )}
+              </motion.button>
+            </motion.div>
           </div>
         </nav>
-      </header>
+      </motion.header>
+
       {/* Mobile Navigation Overlay */}
       <AnimatePresence>
         {isMobileMenuOpen && (

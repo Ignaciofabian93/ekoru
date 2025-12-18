@@ -11,6 +11,28 @@ services:
       - ekoru-network
     env_file:
       - .env.local
+    deploy:
+      resources:
+        limits:
+          cpus: "0.5" # Maximum 0.5 CPU core (low traffic informative site)
+          memory: 256M # Maximum 256MB RAM
+        reservations:
+          cpus: "0.1" # Minimum 0.1 CPU cores reserved
+          memory: 128M # Minimum 128MB RAM reserved
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "wget",
+          "--quiet",
+          "--tries=1",
+          "--spider",
+          "http://localhost:3000",
+        ]
+      interval: 60s
+      timeout: 5s
+      retries: 2
+      start_period: 30s
 
 networks:
   ekoru-network:

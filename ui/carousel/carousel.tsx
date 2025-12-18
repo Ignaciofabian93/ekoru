@@ -15,7 +15,7 @@ import {
 
 export default function Carousel() {
   const [current, setCurrent] = useState(0);
-  const [direction, setDirection] = useState(0); // -1 for left, 1 for right
+  const [direction, setDirection] = useState(0);
   const total = features.length;
 
   const handlePrev = () => {
@@ -30,7 +30,6 @@ export default function Carousel() {
 
   const feature = features[current];
 
-  // Animation variants for sliding effect
   const variants = {
     enter: (dir: number) => ({
       x: dir > 0 ? 300 : -300,
@@ -51,35 +50,40 @@ export default function Carousel() {
     }),
   };
 
-  // Icon mapping for each feature (example, you can customize)
   const icons: Record<string, React.ReactNode> = {
-    Mercado: <Box className="w-10 h-10 mx-auto text-primary" />,
-    Tiendas: <Store className="w-10 h-10 mx-auto text-primary" />,
-    Servicios: <Wrench className="w-10 h-10 mx-auto text-primary" />,
-    Comunidad: <UsersRound className="w-10 h-10 mx-auto text-primary" />,
-    Blog: <BookOpen className="w-10 h-10 mx-auto text-primary" />,
+    Mercado: <Box className="w-12 h-12 mx-auto text-primary" />,
+    Tiendas: <Store className="w-12 h-12 mx-auto text-primary" />,
+    Servicios: <Wrench className="w-12 h-12 mx-auto text-primary" />,
+    Comunidad: <UsersRound className="w-12 h-12 mx-auto text-primary" />,
+    Blog: <BookOpen className="w-12 h-12 mx-auto text-primary" />,
   };
 
   return (
     <section className="w-full flex flex-col items-center justify-center py-6 md:py-8 mx-auto">
-      <div className="w-[90%] max-w-2xl min-h-[360px] bg-white/90 rounded-lg shadow-lg p-3 md:p-6 text-center relative">
-        {/* Navigation buttons on sides, mid-level */}
-        <button
-          className="absolute -left-4 z-50 top-1/2 -translate-y-1/2 p-2 bg-primary/80 text-white rounded-full hover:bg-primary transition"
+      <div className="w-[90%] max-w-3xl min-h-[420px] bg-gradient-to-br from-white via-white to-neutral-light/30 rounded-2xl shadow-2xl p-4 md:p-8 text-center relative border border-primary/10">
+        {/* Enhanced navigation buttons */}
+        <motion.button
+          whileHover={{ scale: 1.1, x: -2 }}
+          whileTap={{ scale: 0.95 }}
+          className="absolute -left-5 z-50 top-1/2 -translate-y-1/2 p-3 bg-gradient-to-r from-primary to-primary-dark text-white rounded-full shadow-lg hover:shadow-xl transition-all"
           style={{ touchAction: "manipulation" }}
           onClick={handlePrev}
           aria-label="Anterior"
         >
-          <ChevronLeft size={22} className="md:w-7 md:h-7 w-5 h-5" />
-        </button>
-        <button
-          className="absolute -right-4 top-1/2 -translate-y-1/2 p-2 bg-primary/80 text-white rounded-full hover:bg-primary transition z-10"
+          <ChevronLeft className="w-6 h-6" />
+        </motion.button>
+
+        <motion.button
+          whileHover={{ scale: 1.1, x: 2 }}
+          whileTap={{ scale: 0.95 }}
+          className="absolute -right-5 top-1/2 -translate-y-1/2 p-3 bg-gradient-to-r from-primary to-primary-dark text-white rounded-full shadow-lg hover:shadow-xl transition-all z-10"
           style={{ touchAction: "manipulation" }}
           onClick={handleNext}
           aria-label="Siguiente"
         >
-          <ChevronRight size={22} className="md:w-7 md:h-7 w-5 h-5" />
-        </button>
+          <ChevronRight className="w-6 h-6" />
+        </motion.button>
+
         <AnimatePresence custom={direction} mode="wait">
           <motion.div
             key={feature.name}
@@ -91,31 +95,57 @@ export default function Carousel() {
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
             className="flex flex-col items-center"
           >
-            <div className="mb-4">{icons[feature.name]}</div>
-            <h3 className="text-2xl font-bold text-primary mb-2">
-              {feature.name}
-            </h3>
-            <p className="text-lg text-gray-800 mb-4 animate-fadeIn">
-              {feature.firstDescription}
-            </p>
+            {/* Animated icon with background */}
             <motion.div
-              className="text-gray-800 font-light mb-4 animate-fadeIn"
+              initial={{ scale: 0, rotate: -180 }}
+              animate={{ scale: 1, rotate: 0 }}
+              transition={{ duration: 0.6, type: "spring" }}
+              className="mb-6 p-4 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-full"
+            >
+              {icons[feature.name]}
+            </motion.div>
+
+            <motion.h3
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="text-3xl font-bold text-primary mb-3 tracking-tight"
+            >
+              {feature.name}
+            </motion.h3>
+
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.3 }}
+              className="text-lg text-gray-800 mb-5 font-medium px-2"
+            >
+              {feature.firstDescription}
+            </motion.p>
+
+            <motion.div
+              className="text-gray-700 font-light leading-relaxed px-2 md:px-4 text-left"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.4 }}
+              transition={{ duration: 0.4, delay: 0.4 }}
               dangerouslySetInnerHTML={{ __html: feature.secondDescription }}
             />
           </motion.div>
         </AnimatePresence>
       </div>
-      {/* Dots under the container */}
-      <div className="flex justify-center items-center gap-3 md:gap-2 mt-4">
+
+      {/* Enhanced dots navigation */}
+      <div className="flex justify-center items-center gap-3 mt-6">
         {features.map((_, idx) => (
-          <button
+          <motion.button
             key={idx}
-            className={`w-3 h-3 md:w-3 md:h-3 rounded-full transition-all duration-300 ${
-              idx === current ? "bg-primary scale-125" : "bg-gray-300"
+            whileHover={{ scale: 1.3 }}
+            whileTap={{ scale: 0.9 }}
+            className={`rounded-full transition-all duration-300 ${
+              idx === current
+                ? "w-10 h-3 bg-gradient-to-r from-primary to-primary-dark"
+                : "w-3 h-3 bg-gray-300 hover:bg-gray-400"
             }`}
             style={{ touchAction: "manipulation" }}
             onClick={() => {
