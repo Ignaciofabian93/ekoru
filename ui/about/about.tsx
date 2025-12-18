@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Leaf, Recycle, Heart, Users } from "lucide-react";
 import Banner from "../banners/banner";
 
-const sectionImage = "/phone.jpg";
+const sectionImage = "/app-demo.webp";
 
 const highlights = [
   { icon: Recycle, text: "Compra, vende e intercambia", color: "text-primary" },
@@ -35,7 +35,7 @@ export default function About() {
           className="w-full md:w-1/2 flex justify-center"
         >
           <motion.div
-            whileHover={{ scale: 1.05, rotate: 2 }}
+            whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
             className="relative rounded-2xl overflow-hidden shadow-2xl"
           >
@@ -46,7 +46,7 @@ export default function About() {
               height={600}
               className="w-auto h-[280px] md:h-[450px] object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent" />
           </motion.div>
         </motion.div>
 

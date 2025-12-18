@@ -60,6 +60,36 @@ export default function Functionalities() {
           variant="outlined"
         />
 
+        {/* Explanation Text */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="max-w-3xl mx-auto text-center mt-8 mb-12"
+        >
+          <div className="space-y-4 text-gray-700 text-base md:text-lg leading-relaxed">
+            <p>
+              Al comprar productos de segunda mano en EKORU, no solo estás
+              ahorrando dinero,
+              <span className="font-semibold text-primary">
+                {" "}
+                estás tomando una decisión consciente
+              </span>{" "}
+              que beneficia al planeta y a tu bolsillo.
+            </p>
+            <p>
+              Cada producto viene con información detallada sobre su
+              <span className="font-semibold text-success">
+                {" "}
+                impacto ambiental positivo
+              </span>
+              : cuánto CO₂ evitas emitir, cuánta agua ahorras y qué materiales
+              estás reutilizando.
+            </p>
+          </div>
+        </motion.div>
+
         {/* Product Demo Cards - Fully Responsive */}
         <div className="flex flex-col sm:flex-row justify-center items-center sm:items-stretch gap-6 sm:gap-8 lg:gap-10 mt-14">
           {demoProducts.map((product, index) => (
