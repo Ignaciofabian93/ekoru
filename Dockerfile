@@ -31,7 +31,8 @@ COPY package-lock.json ./
 RUN npm ci --only=production
 
 # Copy built application from builder stage
-COPY --from=builder /app/dist ./dist
+COPY --from=builder /app/.next ./.next
+COPY --from=builder /app/public ./public
 
 CMD [ "npm", "start" ]
 
