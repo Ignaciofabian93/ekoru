@@ -9,7 +9,7 @@ const sectionImage = "/phone.jpg";
 const highlights = [
   { icon: Recycle, text: "Compra, vende e intercambia", color: "text-primary" },
   { icon: Leaf, text: "Repara y recicla", color: "text-secondary" },
-  { icon: Heart, text: "Consume consciente", color: "text-primary-dark" },
+  { icon: Heart, text: "Consume consciente", color: "text-secondary" },
   { icon: Users, text: "Construye comunidad", color: "text-primary" },
 ];
 

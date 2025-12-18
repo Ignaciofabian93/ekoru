@@ -55,7 +55,7 @@ export default function Navbar() {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.6 }}
-        className="bg-gradient-to-r from-primary-light via-primary to-primary-dark shadow-md border-b border-neutral/20 sticky top-0 z-50 backdrop-blur-sm"
+        className="bg-gradient-to-r from-primary-dark via-primary to-primary-dark shadow-md border-b border-neutral/20 sticky top-0 z-50 backdrop-blur-sm"
       >
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">

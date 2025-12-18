@@ -22,7 +22,7 @@ const IconLink = ({
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-r from-primary-light via-primary to-primary-dark text-white border-t border-white">
+    <footer className="bg-gradient-to-r from-primary-dark via-primary to-primary-dark text-white border-t border-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex flex-col gap-8">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="flex-shrink-0">
@@ -43,38 +43,6 @@ export default function Footer() {
                 cambia el mundo
               </span>
             </q>
-            {/* <nav className="flex flex-wrap gap-4 text-white text-sm font-medium">
-              <Link
-                href="/community"
-                className="hover:text-primary transition-colors"
-              >
-                Comunidad
-              </Link>
-              <Link
-                href="/blog"
-                className="hover:text-primary transition-colors"
-              >
-                Blog
-              </Link>
-              <Link
-                href="/departments"
-                className="hover:text-primary transition-colors"
-              >
-                Mercado
-              </Link>
-              <Link
-                href="/stores"
-                className="hover:text-primary transition-colors"
-              >
-                Tiendas
-              </Link>
-              <Link
-                href="/help"
-                className="hover:text-primary transition-colors"
-              >
-                Ayuda
-              </Link>
-            </nav> */}
           </div>
           <div className="flex gap-3">
             <IconLink url="https://www.instagram.com/ekoru_chile?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
@@ -105,7 +73,7 @@ export default function Footer() {
               href="/terms-and-conditions"
               className="hover:text-primary transition-colors"
             >
-              Términos
+              Términos y Condiciones
             </Link>
             {/* <Link
               href="/legal/community-guidelines"
