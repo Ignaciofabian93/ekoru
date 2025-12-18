@@ -154,16 +154,21 @@ const getUserConfirmationTemplate = (name: string) => `
                     <p style="margin: 0 0 10px 0; color: #71b64a; font-weight: 600; font-size: 15px;">
                       💚 Mientras tanto...
                     </p>
-                    <p style="margin: 0; color: #2d5016; font-size: 14px; line-height: 1.6;">
-                      Te invitamos a conocer más sobre nuestra visión de economía circular y cómo estamos transformando la manera en que consumimos.
+                    <p style="margin: 0 0 15px 0; color: #2d5016; font-size: 14px; line-height: 1.6;">
+                      Te invitamos a conocer más sobre nuestra visión de economía circular y cómo estamos transformando la manera en que consumimos en nuestro Instagram.
                     </p>
+                    <table role="presentation" style="width: 100%; border-collapse: collapse;">
+                      <tr>
+                        <td style="text-align: center; padding-top: 10px;">
+                          <a href="https://www.instagram.com/ekoru_chile/" target="_blank" style="display: inline-block; padding: 10px 24px; background: linear-gradient(135deg, #E1306C 0%, #C13584 100%); color: #ffffff; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 13px;">
+                            📸 Síguenos en Instagram
+                          </a>
+                        </td>
+                      </tr>
+                    </table>
                   </td>
                 </tr>
               </table>
-              
-              <p style="margin: 0; color: #6b7280; font-size: 15px; line-height: 1.6;">
-                Si tienes alguna pregunta urgente, no dudes en responder a este correo.
-              </p>
             </td>
           </tr>
           
