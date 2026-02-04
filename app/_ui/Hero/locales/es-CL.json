@@ -1,0 +1,14 @@
+{
+  "slogan": "La nueva forma de circular",
+  "subtitle": "Una plataforma que conecta personas y transforma la forma de consumir",
+  "ctaButton": "Más información",
+  "features": {
+    "buy": "Compra",
+    "sell": "Vende",
+    "exchange": "Intercambia",
+    "repair": "Repara",
+    "recycle": "Recicla",
+    "connect": "Conecta"
+  },
+  "nextSection": "quienes-somos"
+}

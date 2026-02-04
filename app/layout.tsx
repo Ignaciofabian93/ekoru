@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import { Cabin } from "next/font/google";
 import { ToastContainer } from "react-toastify";
+import LocaleProvider from "@/lib/providers/LocaleProvider";
+import LocaleHtmlLang from "@/components/LocaleHtmlLang";
 import "./globals.css";
+import "@ekoru/ui/styles";
 
 const cabin = Cabin({
   variable: "--font-cabin-sans",
@@ -64,16 +67,19 @@ export default function RootLayout({
         />
       </head>
       <body className={`${cabin.variable} antialiased`}>
-        <main id="main-content" tabIndex={-1}>
-          <ToastContainer
-            theme="light"
-            autoClose={2500}
-            pauseOnHover
-            position="top-center"
-            closeOnClick
-          />
-          {children}
-        </main>
+        <LocaleProvider>
+          <LocaleHtmlLang />
+          <main id="main-content" tabIndex={-1}>
+            <ToastContainer
+              theme="light"
+              autoClose={2500}
+              pauseOnHover
+              position="top-center"
+              closeOnClick
+            />
+            {children}
+          </main>
+        </LocaleProvider>
       </body>
     </html>
   );

@@ -1,0 +1,88 @@
+{
+  "common": {
+    "welcome": "Bienvenido",
+    "home": "Inicio",
+    "search": "Buscar",
+    "cart": "Carrito",
+    "profile": "Perfil",
+    "login": "Iniciar sesion",
+    "register": "Registrarse",
+    "logout": "Cerrar sesion",
+    "loading": "Cargando...",
+    "error": "Error",
+    "success": "Exito",
+    "cancel": "Cancelar",
+    "save": "Guardar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "view": "Ver",
+    "back": "Volver",
+    "next": "Siguiente",
+    "previous": "Anterior",
+    "submit": "Enviar",
+    "close": "Cerrar",
+    "navigation": "Navegacion",
+    "language": "Idioma",
+    "currency": "Moneda"
+  },
+  "navigation": {
+    "home": "Inicio",
+    "marketplace": "Marketplace",
+    "stores": "Tiendas",
+    "services": "Servicios",
+    "community": "Comunidad",
+    "blog": "Blog",
+    "cart": "Carrito",
+    "profile": "Perfil"
+  },
+  "product": {
+    "addToCart": "Agregar al carrito",
+    "buyNow": "Comprar ahora",
+    "outOfStock": "Sin stock",
+    "inStock": "En stock",
+    "price": "Precio",
+    "description": "Descripcion",
+    "specifications": "Especificaciones",
+    "reviews": "Resenas",
+    "rating": "Calificacion"
+  },
+  "auth": {
+    "emailLabel": "Correo electronico",
+    "passwordLabel": "Contrasena",
+    "forgotPassword": "Olvidaste tu contrasena?",
+    "noAccount": "No tienes una cuenta?",
+    "hasAccount": "Ya tienes una cuenta?",
+    "signUp": "Registrate",
+    "signIn": "Inicia sesion"
+  },
+  "cart": {
+    "empty": "Tu carrito esta vacio",
+    "title": "Carrito de compras",
+    "total": "Total",
+    "subtotal": "Subtotal",
+    "shipping": "Envio",
+    "tax": "Impuestos",
+    "checkout": "Finalizar compra",
+    "continueShopping": "Continuar comprando"
+  },
+  "footer": {
+    "aboutUs": "Sobre nosotros",
+    "contactUs": "Contactanos",
+    "termsOfService": "Terminos de servicio",
+    "privacyPolicy": "Politica de privacidad",
+    "communityGuidelines": "Normas de la comunidad"
+  },
+  "navbar": {
+    "menu": "Menu",
+    "navigation": "Navegacion",
+    "whoWeAre": "EKORU?",
+    "features": "Funcionalidades",
+    "missionVision": "Mision y Vision",
+    "team": "Equipo",
+    "contact": "Contacto",
+    "information": "Informacion",
+    "privacyPolicy": "Politica de Privacidad",
+    "termsAndConditions": "Terminos y Condiciones",
+    "articlesAndLaws": "Articulos y Leyes"
+  }
+}

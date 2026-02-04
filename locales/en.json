@@ -1,0 +1,88 @@
+{
+  "common": {
+    "welcome": "Welcome",
+    "home": "Home",
+    "search": "Search",
+    "cart": "Cart",
+    "profile": "Profile",
+    "login": "Login",
+    "register": "Register",
+    "logout": "Logout",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "view": "View",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "submit": "Submit",
+    "close": "Close",
+    "navigation": "Navigation",
+    "language": "Language",
+    "currency": "Currency"
+  },
+  "navigation": {
+    "home": "Home",
+    "marketplace": "Marketplace",
+    "stores": "Stores",
+    "services": "Services",
+    "community": "Community",
+    "blog": "Blog",
+    "cart": "Cart",
+    "profile": "Profile"
+  },
+  "product": {
+    "addToCart": "Add to cart",
+    "buyNow": "Buy now",
+    "outOfStock": "Out of stock",
+    "inStock": "In stock",
+    "price": "Price",
+    "description": "Description",
+    "specifications": "Specifications",
+    "reviews": "Reviews",
+    "rating": "Rating"
+  },
+  "auth": {
+    "emailLabel": "Email",
+    "passwordLabel": "Password",
+    "forgotPassword": "Forgot your password?",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?",
+    "signUp": "Sign up",
+    "signIn": "Sign in"
+  },
+  "cart": {
+    "empty": "Your cart is empty",
+    "title": "Shopping Cart",
+    "total": "Total",
+    "subtotal": "Subtotal",
+    "shipping": "Shipping",
+    "tax": "Tax",
+    "checkout": "Checkout",
+    "continueShopping": "Continue shopping"
+  },
+  "footer": {
+    "aboutUs": "About us",
+    "contactUs": "Contact us",
+    "termsOfService": "Terms of service",
+    "privacyPolicy": "Privacy policy",
+    "communityGuidelines": "Community guidelines"
+  },
+  "navbar": {
+    "menu": "Menu",
+    "navigation": "Navigation",
+    "whoWeAre": "EKORU?",
+    "features": "Features",
+    "missionVision": "Mission & Vision",
+    "team": "Team",
+    "contact": "Contact",
+    "information": "Information",
+    "privacyPolicy": "Privacy Policy",
+    "termsAndConditions": "Terms & Conditions",
+    "articlesAndLaws": "Articles & Laws"
+  }
+}

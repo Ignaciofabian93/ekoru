@@ -1,0 +1,27 @@
+{
+  "highlights": {
+    "buySellExchange": "Buy, sell, and trade",
+    "repairRecycle": "Repair and recycle",
+    "consciousConsumption": "Conscious consumption",
+    "buildCommunity": "Build community"
+  },
+  "sectionId": "who-we-are",
+  "banner": {
+    "title": "EKORU IS WHERE CHANGE BEGINS",
+    "description": "From the everyday, from what you have, from you"
+  },
+  "content": {
+    "title": "What is EKORU?",
+    "paragraph1-1": "is much more than an app: it's a new way of approaching consumption. A platform that allows you to",
+    "paragraph1Highlight": "buy, sell, trade, repair, and recycle",
+    "paragraph1-2": "consciously, practically, and enjoyably. We believe that what you already have matters, that what others let go can bloom again, and that every daily decision can contribute to a healthier planet and a more aware community.",
+    "paragraph2-1": "Here you don't just connect with objects,",
+    "paragraphHighlight-1": "you connect with stories",
+    "paragraph2-2": ". You don't just reduce waste,",
+    "paragraphHighlight-2": "you give new lives",
+    "paragraph2-3": ". And you don't just make an impact,",
+    "paragraphHighlight-3": "you share it",
+    "blockquote": "EKORU is circularity, it's economy, it's community, and we don't go in circles,",
+    "blockquoteHighlight": "we advance in spirals"
+  }
+}

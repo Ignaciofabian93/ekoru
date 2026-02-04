@@ -1,0 +1,24 @@
+{
+  "navigation": {
+    "title": "Navigation",
+    "whoWeAre": "EKORU?",
+    "features": "Fonctionnalites",
+    "missionVision": "Mission et Vision",
+    "team": "Equipe",
+    "contact": "Contact"
+  },
+  "information": {
+    "title": "Information",
+    "faq": "FAQ",
+    "privacyPolicy": "Politique de confidentialite",
+    "termsOfService": "Conditions d'utilisation"
+  },
+  "menu": "Menu",
+  "ids": {
+    "whoWeAre": "qui-nous-sommes",
+    "features": "fonctionnalites",
+    "missionVision": "mission-et-vision",
+    "team": "equipe",
+    "contact": "contact"
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "common": {
+    "welcome": "Bienvenue",
+    "home": "Accueil",
+    "search": "Rechercher",
+    "cart": "Panier",
+    "profile": "Profil",
+    "login": "Se connecter",
+    "register": "S'inscrire",
+    "logout": "Se deconnecter",
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "success": "Succes",
+    "cancel": "Annuler",
+    "save": "Enregistrer",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "view": "Voir",
+    "back": "Retour",
+    "next": "Suivant",
+    "previous": "Precedent",
+    "submit": "Soumettre",
+    "close": "Fermer",
+    "navigation": "Navigation",
+    "language": "Langue",
+    "currency": "Devise"
+  },
+  "navigation": {
+    "home": "Accueil",
+    "marketplace": "Marche",
+    "stores": "Magasins",
+    "services": "Services",
+    "community": "Communaute",
+    "blog": "Blog",
+    "cart": "Panier",
+    "profile": "Profil"
+  },
+  "product": {
+    "addToCart": "Ajouter au panier",
+    "buyNow": "Acheter maintenant",
+    "outOfStock": "Rupture de stock",
+    "inStock": "En stock",
+    "price": "Prix",
+    "description": "Description",
+    "specifications": "Specifications",
+    "reviews": "Avis",
+    "rating": "Evaluation"
+  },
+  "auth": {
+    "emailLabel": "Courriel",
+    "passwordLabel": "Mot de passe",
+    "forgotPassword": "Mot de passe oublie?",
+    "noAccount": "Vous n'avez pas de compte?",
+    "hasAccount": "Vous avez deja un compte?",
+    "signUp": "S'inscrire",
+    "signIn": "Se connecter"
+  },
+  "cart": {
+    "empty": "Votre panier est vide",
+    "title": "Panier d'achat",
+    "total": "Total",
+    "subtotal": "Sous-total",
+    "shipping": "Livraison",
+    "tax": "Taxes",
+    "checkout": "Commander",
+    "continueShopping": "Continuer les achats"
+  },
+  "footer": {
+    "aboutUs": "A propos",
+    "contactUs": "Nous contacter",
+    "termsOfService": "Conditions d'utilisation",
+    "privacyPolicy": "Politique de confidentialite",
+    "communityGuidelines": "Regles de la communaute"
+  },
+  "navbar": {
+    "menu": "Menu",
+    "navigation": "Navigation",
+    "whoWeAre": "EKORU?",
+    "features": "Fonctionnalites",
+    "missionVision": "Mission et Vision",
+    "team": "Equipe",
+    "contact": "Contact",
+    "information": "Information",
+    "privacyPolicy": "Politique de confidentialite",
+    "termsAndConditions": "Termes et conditions",
+    "articlesAndLaws": "Articles et lois"
+  }
+}

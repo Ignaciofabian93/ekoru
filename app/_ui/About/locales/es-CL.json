@@ -1,0 +1,27 @@
+{
+  "highlights": {
+    "buySellExchange": "Compra, vende e intercambia",
+    "repairRecycle": "Repara y recicla",
+    "consciousConsumption": "Consume consciente",
+    "buildCommunity": "Construye comunidad"
+  },
+  "sectionId": "quienes-somos",
+  "banner": {
+    "title": "EKORU ES DONDE EMPIEZA EL CAMBIO",
+    "description": "Desde lo cotidiano, desde lo que tienes, desde ti"
+  },
+  "content": {
+    "title": "¿Qué es EKORU?",
+    "paragraph1-1": "es mucho más que una app: es una nueva forma de habitar el consumo. Una plataforma que te permite",
+    "paragraph1Highlight": "comprar, vender, intercambiar, reparar y reciclar",
+    "paragraph1-2": "de forma consciente, práctica y entretenida. Creemos que lo que ya tienes vale, que lo que otros sueltan puede volver a florecer, y que cada decisión cotidiana puede sumar a un planeta más sano y una comunidad más despierta.",
+    "paragraph2-1": "Aquí no solo conectas con objetos,",
+    "paragraphHighlight-1": "conectas con historias",
+    "paragraph2-2": ". No solo reduces residuos,",
+    "paragraphHighlight-2": "das nuevas vidas",
+    "paragraph2-3": ". Y no solo haces impacto,",
+    "paragraphHighlight-3": "lo compartes",
+    "blockquote": "EKORU es circularidad, es economía, es comunidad, y no giramos en círculos,",
+    "blockquoteHighlight": "avanzamos en espiral"
+  }
+}
