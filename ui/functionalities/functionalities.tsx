@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
-import Banner from "../banners/banner";
 import ProductDemoCard from "../cards/feature/featureCard";
+import { Banner } from "@ekoru/ui";
 
 // Mock product data
 const demoProducts = [
@@ -57,7 +57,7 @@ export default function Functionalities() {
         <Banner
           title="Ejemplos de Productos en EKORU"
           description="Así se verán los productos en nuestra plataforma."
-          variant="outlined"
+          variant="secondary"
         />
 
         {/* Explanation Text */}
