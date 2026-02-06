@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "motion/react";
-import { Banner } from "@ekoru/ui";
+import { Banner, Text } from "@ekoru/ui";
+import { useFeaturesTranslations } from "./useFeaturesTranslations";
 
 // Mock product data
 const demoProducts = [
@@ -47,15 +48,18 @@ const demoProducts = [
 ];
 
 export default function Features() {
+  const { sectionId, banner, explanation, impactSummary } =
+    useFeaturesTranslations();
+
   return (
     <section
-      id="features"
+      id={sectionId}
       className="bg-gradient-to-b from-white via-primary-light/20 to-white mx-auto py-16"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
         <Banner
-          title="Ejemplos de Productos en EKORU"
-          description="Así se verán los productos en nuestra plataforma."
+          title={banner.title}
+          description={banner.description}
           variant="secondary"
         />
 
@@ -68,24 +72,22 @@ export default function Features() {
           className="max-w-3xl mx-auto text-center mt-8 mb-12"
         >
           <div className="space-y-4 text-gray-700 text-base md:text-lg leading-relaxed">
-            <p>
-              Al comprar productos de segunda mano en EKORU, no solo estás
-              ahorrando dinero,
-              <span className="font-semibold text-primary">
+            <Text variant="p">
+              {explanation.part1}
+              <Text variant="span" className="font-semibold text-primary">
                 {" "}
-                estás tomando una decisión consciente
-              </span>{" "}
-              que beneficia al planeta y a tu bolsillo.
-            </p>
-            <p>
-              Cada producto viene con información detallada sobre su
-              <span className="font-semibold text-success">
+                {explanation.highlight1}
+              </Text>{" "}
+              {explanation.part2}
+            </Text>
+            <Text variant="p">
+              {explanation.part3}
+              <Text variant="span" className="font-semibold text-success">
                 {" "}
-                impacto ambiental positivo
-              </span>
-              : cuánto CO₂ evitas emitir, cuánta agua ahorras y qué materiales
-              estás reutilizando.
-            </p>
+                {explanation.highlight2}
+              </Text>
+              {explanation.part4}
+            </Text>
           </div>
         </motion.div>
 
@@ -110,28 +112,32 @@ export default function Features() {
         >
           <div className="bg-gradient-to-br from-primary/5 via-white to-secondary/5 rounded-2xl p-6 sm:p-8 border-2 border-primary/10 shadow-lg">
             <h3 className="text-xl sm:text-2xl font-bold text-center text-gray-800 mb-6">
-              🌍 Impacto de Comprar Segunda Mano
+              {impactSummary.title}
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
               <div className="text-center p-4 bg-white rounded-xl shadow-sm">
                 <p className="text-3xl sm:text-4xl font-bold text-success mb-2">
-                  204 kg
+                  {impactSummary.co2.value}
                 </p>
                 <p className="text-sm text-gray-600">
-                  CO₂ ahorrado en estos 2 productos
+                  {impactSummary.co2.label}
                 </p>
               </div>
               <div className="text-center p-4 bg-white rounded-xl shadow-sm">
                 <p className="text-3xl sm:text-4xl font-bold text-info mb-2">
-                  11,760 L
+                  {impactSummary.water.value}
                 </p>
-                <p className="text-sm text-gray-600">Agua ahorrada</p>
+                <p className="text-sm text-gray-600">
+                  {impactSummary.water.label}
+                </p>
               </div>
               <div className="text-center p-4 bg-white rounded-xl shadow-sm">
                 <p className="text-3xl sm:text-4xl font-bold text-primary mb-2">
-                  100%
+                  {impactSummary.lifespan.value}
                 </p>
-                <p className="text-sm text-gray-600">Vida útil extendida</p>
+                <p className="text-sm text-gray-600">
+                  {impactSummary.lifespan.label}
+                </p>
               </div>
             </div>
           </div>

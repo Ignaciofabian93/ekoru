@@ -1,0 +1,31 @@
+{
+  "description": "EKORU, plataforma circular",
+  "explore": {
+    "title": "Descubre más",
+    "links": {
+      "home": "Inicio",
+      "about": "Acerca de",
+      "features": "Funcionalidades"
+    }
+  },
+  "community": {
+    "title": "Comunidad",
+    "links": {
+      "blog": "Blog",
+      "forum": "Foro",
+      "events": "Eventos"
+    }
+  },
+  "legal": {
+    "title": "Legal",
+    "links": {
+      "terms": "Términos de Servicio",
+      "privacy": "Política de Privacidad"
+    }
+  },
+  "social": {
+    "facebook": "Facebook",
+    "twitter": "Twitter",
+    "instagram": "Instagram"
+  }
+}

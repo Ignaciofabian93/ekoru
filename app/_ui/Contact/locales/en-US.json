@@ -1,0 +1,33 @@
+{
+  "sectionId": "contact",
+  "banner": {
+    "title": "LET'S TALK AS A COMMUNITY",
+    "description": "Ask us, propose, join or vent... everything counts!"
+  },
+  "description": "For ideas that add up, questions that inspire, or messages that want to be heard. Fill in your details and we promise to respond with attention, care, and circularity.",
+  "form": {
+    "name": {
+      "label": "What's your name?",
+      "placeholder": "Enter your name"
+    },
+    "email": {
+      "label": "Where can we reply to your message?",
+      "placeholder": "example@email.com"
+    },
+    "message": {
+      "label": "Tell us, we read what you write with enthusiasm",
+      "placeholder": "How can we help you?"
+    },
+    "submitButton": "Send",
+    "loadingText": "Sending...",
+    "footer": "Thank you for sharing. This is also circular."
+  },
+  "messages": {
+    "success": {
+      "title": "Message sent!",
+      "description": "Thank you for contacting us. We'll respond soon."
+    },
+    "successNotification": "Message sent successfully!",
+    "error": "There was an error sending the message."
+  }
+}

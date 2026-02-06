@@ -1,9 +1,10 @@
 "use client";
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 import { UserRound, Send, CheckCircle } from "lucide-react";
 import useAlert from "@/hooks/useAlert";
 import { Banner, Button, Textarea, TextInput } from "@ekoru/ui";
+import { useContactTranslations } from "./useContactTranslations";
 
 type FormState = {
   name: string;
@@ -12,6 +13,8 @@ type FormState = {
 };
 
 export default function Contact() {
+  const { sectionId, banner, description, form, messages } =
+    useContactTranslations();
   const [formData, setFormData] = useState<FormState>({
     name: "",
     email: "",
@@ -42,18 +45,18 @@ export default function Contact() {
       });
 
       if (response.ok) {
-        notify("¡Mensaje enviado con éxito!");
+        notify(messages.successNotification);
         setSuccess(true);
         setFormData({ name: "", email: "", message: "" });
 
         // Reset success state after animation
         setTimeout(() => setSuccess(false), 3000);
       } else {
-        notifyError("Hubo un error al enviar el mensaje.");
+        notifyError(messages.error);
       }
     } catch (error) {
       console.error("Error submitting form:", error);
-      notifyError("Hubo un error al enviar el mensaje.");
+      notifyError(messages.error);
     } finally {
       setLoading(false);
     }
@@ -61,7 +64,7 @@ export default function Contact() {
 
   return (
     <section
-      id="contact"
+      id={sectionId}
       className="relative max-w-5xl mx-auto px-4 md:px-10 py-16 bg-gradient-to-b from-white/80 to-neutral-light/30 rounded-2xl my-16"
     >
       <div className="relative z-10">
@@ -72,8 +75,8 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
         >
           <Banner
-            title="HABLEMOS COMO COMUNIDAD"
-            description="Pregúntanos, propón, súmate o desahógate... ¡todo suma!"
+            title={banner.title}
+            description={banner.description}
             variant="outlined"
           />
         </motion.div>
@@ -85,9 +88,7 @@ export default function Contact() {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="text-gray-800 font-light text-lg my-8 text-center max-w-2xl mx-auto"
         >
-          Para ideas que suman, preguntas que inspiran o mensajes que quieren
-          ser escuchados. Completa tus datos y prometemos responderte con
-          atención, cariño y circularidad.
+          {description}
         </motion.p>
 
         <motion.form
@@ -116,10 +117,10 @@ export default function Contact() {
                   <CheckCircle className="w-20 h-20 text-primary mb-4" />
                 </motion.div>
                 <h3 className="text-2xl font-bold text-primary mb-2">
-                  ¡Mensaje enviado!
+                  {messages.success.title}
                 </h3>
                 <p className="text-gray-600 text-center">
-                  Gracias por contactarnos. Te responderemos pronto.
+                  {messages.success.description}
                 </p>
               </motion.div>
             ) : (
@@ -136,10 +137,10 @@ export default function Contact() {
                   transition={{ delay: 0.1 }}
                 >
                   <TextInput
-                    label="¿Cuál es tu nombre?"
+                    label={form.name.label}
                     name="name"
                     value={formData.name}
-                    placeholder="Ingresa tu nombre"
+                    placeholder={form.name.placeholder}
                     onChange={(e) =>
                       handleChange(e as React.ChangeEvent<HTMLInputElement>)
                     }
@@ -154,11 +155,11 @@ export default function Contact() {
                   transition={{ delay: 0.2 }}
                 >
                   <TextInput
-                    label="¿Dónde podemos contestar tu mensaje?"
+                    label={form.email.label}
                     name="email"
                     type="email"
                     value={formData.email}
-                    placeholder="ejemplo@correo.com"
+                    placeholder={form.email.placeholder}
                     onChange={(e) =>
                       handleChange(e as React.ChangeEvent<HTMLInputElement>)
                     }
@@ -171,11 +172,11 @@ export default function Contact() {
                   transition={{ delay: 0.3 }}
                 >
                   <Textarea
-                    label="Cuéntanos, lo que escribas lo leemos con ganas"
+                    label={form.message.label}
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
-                    placeholder="¿En qué podemos ayudarte?"
+                    placeholder={form.message.placeholder}
                     required
                   />
                 </motion.div>
@@ -190,10 +191,10 @@ export default function Contact() {
                     rightIcon={Send}
                     className="w-full max-w-xs"
                     isLoading={loading}
-                    loadingText="Enviando..."
+                    loadingText={form.loadingText}
                     type="submit"
                   >
-                    Enviar
+                    {form.submitButton}
                   </Button>
                   <motion.span
                     initial={{ opacity: 0 }}
@@ -201,7 +202,7 @@ export default function Contact() {
                     transition={{ delay: 0.6 }}
                     className="text-xs text-gray-600 text-center italic mt-4"
                   >
-                    Gracias por compartir. Esto también es circular.
+                    {form.footer}
                   </motion.span>
                 </motion.div>
               </motion.div>

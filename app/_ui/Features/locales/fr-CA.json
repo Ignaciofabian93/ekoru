@@ -1,0 +1,30 @@
+{
+  "sectionId": "features",
+  "banner": {
+    "title": "Exemples de Produits sur EKORU",
+    "description": "Voici à quoi ressembleront les produits sur notre plateforme."
+  },
+  "explanation": {
+    "part1": "En achetant des produits d'occasion sur EKORU, vous n'économisez pas seulement de l'argent,",
+    "highlight1": "vous prenez une décision consciente",
+    "part2": "qui profite à la planète et à votre portefeuille.",
+    "part3": "Chaque produit est accompagné d'informations détaillées sur son",
+    "highlight2": "impact environnemental positif",
+    "part4": ": combien de CO₂ vous évitez d'émettre, combien d'eau vous économisez et quels matériaux vous réutilisez."
+  },
+  "impactSummary": {
+    "title": "🌍 Impact de l'Achat d'Occasion",
+    "co2": {
+      "value": "204 kg",
+      "label": "CO₂ économisé dans ces 2 produits"
+    },
+    "water": {
+      "value": "11,760 L",
+      "label": "Eau économisée"
+    },
+    "lifespan": {
+      "value": "100%",
+      "label": "Durée de vie prolongée"
+    }
+  }
+}

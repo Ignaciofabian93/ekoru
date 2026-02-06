@@ -1,0 +1,59 @@
+{
+  "sectionId": "mission&vision",
+  "banners": {
+    "top": {
+      "title": "NO FUE UNA IDEA. FUE UNA INQUIETUD",
+      "description": "Donde muchos vieron problemas, nosotros vimos una semilla"
+    },
+    "bottom": {
+      "title": "QUE VIVIR EMPIECE POR LO QUE SIENTES",
+      "description": "Cambiar cómo consumes, cambia cómo habitas."
+    }
+  },
+  "introText": {
+    "part1": "EKORU no nació de una idea brillante, nació de una incomodidad real,",
+    "part2": "y de la convicción de que sí hay otra forma de vivir. Basta de tanto consumo, tanto desecho, tanta desconexión.",
+    "part3": "EKORU es una comunidad",
+    "part4": "que no espera que el mundo cambie… lo cambia. No somos perfectos, y no nos interesa serlo, pero cada persona que se suma enciende una chispa. Y juntas,",
+    "part5": "encendemos el futuro."
+  },
+  "imageAlt": "Icons representing our mission and vision",
+  "mission": {
+    "title": "Nuestra Misión",
+    "part1": "Inspiramos otra forma de consumir: más consciente, más circular y mucho más humana. Estamos aquí para",
+    "highlight1": "transformar lo cotidiano en impacto",
+    "part2": ", lo usado en tesoro, y lo individual en comunidad. Queremos que",
+    "highlight2": "cada persona, cada objeto y cada decisión sume a un planeta más sano",
+    "part3": "y una forma de vivir que se parezca más a lo que sentimos."
+  },
+  "vision": {
+    "title": "Nuestra Visión",
+    "part1": "Creemos en un mundo donde",
+    "highlight1": "soltar también es cuidar",
+    "part2": ". Donde lo que ya existe puede volver a brillar.",
+    "highlight2": "Soñamos con hacer de la sostenibilidad un hábito diario, colectivo y circular.",
+    "part3": "No como una carga, sino como una forma más liviana, coherente y viva de habitar. En EKORU no queremos hacerlo por ti, queremos hacerlo contigo.",
+    "highlight3": "Porque el cambio no es una meta, es una forma de caminar distinto, todos los días."
+  },
+  "values": {
+    "title": "Nuestros Valores",
+    "items": [
+      {
+        "title": "Creemos en el cuidado.",
+        "text": "Por las personas, por las cosas, por el planeta que compartimos."
+      },
+      {
+        "title": "Creemos en la confianza.",
+        "text": "No estamos aquí para competir. Estamos aquí para construir comunidad."
+      },
+      {
+        "title": "Creemos en la acción.",
+        "text": "No venimos a decorar discursos. Venimos a hacer que pasen cosas."
+      },
+      {
+        "title": "Creemos en la cercanía.",
+        "text": "No hablamos como marca. Hablamos como tú. Y pensamos contigo."
+      }
+    ]
+  }
+}

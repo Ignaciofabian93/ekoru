@@ -1,0 +1,33 @@
+{
+  "sectionId": "contact",
+  "banner": {
+    "title": "PARLONS EN TANT QUE COMMUNAUTÉ",
+    "description": "Demandez-nous, proposez, joignez-vous ou exprimez-vous... tout compte!"
+  },
+  "description": "Pour des idées qui s'additionnent, des questions qui inspirent ou des messages qui veulent être entendus. Remplissez vos coordonnées et nous promettons de répondre avec attention, soin et circularité.",
+  "form": {
+    "name": {
+      "label": "Quel est votre nom?",
+      "placeholder": "Entrez votre nom"
+    },
+    "email": {
+      "label": "Où pouvons-nous répondre à votre message?",
+      "placeholder": "exemple@courriel.com"
+    },
+    "message": {
+      "label": "Dites-nous, nous lisons ce que vous écrivez avec enthousiasme",
+      "placeholder": "Comment pouvons-nous vous aider?"
+    },
+    "submitButton": "Envoyer",
+    "loadingText": "Envoi en cours...",
+    "footer": "Merci de partager. Ceci est aussi circulaire."
+  },
+  "messages": {
+    "success": {
+      "title": "Message envoyé!",
+      "description": "Merci de nous avoir contactés. Nous répondrons bientôt."
+    },
+    "successNotification": "Message envoyé avec succès!",
+    "error": "Une erreur s'est produite lors de l'envoi du message."
+  }
+}

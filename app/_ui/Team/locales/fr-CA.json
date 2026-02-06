@@ -1,0 +1,26 @@
+{
+  "sectionId": "team",
+  "banner": {
+    "title": "UNE PETITE ÉQUIPE. UNE INTENTION ÉNORME",
+    "description": "Un espace construit avec l'âme, pas avec des titres."
+  },
+  "members": [
+    {
+      "name": "Ignacio Rodríguez",
+      "role": "Ingénieur Logiciel",
+      "description": "Magicien du clavier. Fan de café et amateur de bugs difficiles.",
+      "summary": "Ignacio est celui qui transforme notre folie circulaire en boutons qui fonctionnent vraiment, des écrans qui se chargent vraiment et des expériences qui ne vous font pas détester la technologie. Il ne développe pas seulement l'application. Il l'écoute, la teste, la casse... et la reconstruit mieux. Si EKORU était un vélo circulaire, Ignacio serait la chaîne et aussi celui qui la graisse."
+    },
+    {
+      "name": "Jorge Conejeros",
+      "role": "Stratège & Connecteur",
+      "description": "Connecteur avec un but. A mille notes avec des choses qui \"pourraient fonctionner\".",
+      "summary": "Jorge est celui qui n'attend pas d'avoir tout réglé pour commencer. Il propose des idées à moitié folles et parvient quand même à leur donner du sens. Il n'est pas intéressé à diriger du haut, mais à pousser du milieu. Avec plus de doutes que de certitudes et plus d'envie que d'excuses. Si EKORU était un feu de camp, Jorge serait celui qui apporte les premiers bâtons, et celui qui rassemble tout le monde."
+    }
+  ],
+  "ui": {
+    "clickToSeeMore": "Touchez pour en voir plus",
+    "clickToGoBack": "Touchez pour revenir",
+    "about": "À propos de"
+  }
+}

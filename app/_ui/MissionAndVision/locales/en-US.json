@@ -1,0 +1,59 @@
+{
+  "sectionId": "mission&vision",
+  "banners": {
+    "top": {
+      "title": "IT WASN'T AN IDEA. IT WAS A CONCERN",
+      "description": "Where many saw problems, we saw a seed"
+    },
+    "bottom": {
+      "title": "LET LIVING START WITH WHAT YOU FEEL",
+      "description": "Changing how you consume, changes how you inhabit."
+    }
+  },
+  "introText": {
+    "part1": "EKORU wasn't born from a brilliant idea, it was born from a real discomfort,",
+    "part2": "and from the conviction that yes, there is another way to live. Enough of so much consumption, so much waste, so much disconnection.",
+    "part3": "EKORU is a community",
+    "part4": "that doesn't wait for the world to change... it changes it. We're not perfect, and we're not interested in being so, but each person who joins lights a spark. And together,",
+    "part5": "we light up the future."
+  },
+  "imageAlt": "Icons representing our mission and vision",
+  "mission": {
+    "title": "Our Mission",
+    "part1": "We inspire another way of consuming: more conscious, more circular, and much more human. We are here to",
+    "highlight1": "transform the everyday into impact",
+    "part2": ", the used into treasure, and the individual into community. We want",
+    "highlight2": "every person, every object, and every decision to contribute to a healthier planet",
+    "part3": "and a way of living that feels more like what we feel."
+  },
+  "vision": {
+    "title": "Our Vision",
+    "part1": "We believe in a world where",
+    "highlight1": "letting go is also caring",
+    "part2": ". Where what already exists can shine again.",
+    "highlight2": "We dream of making sustainability a daily, collective, and circular habit.",
+    "part3": "Not as a burden, but as a lighter, more coherent, and more alive way of inhabiting. At EKORU we don't want to do it for you, we want to do it with you.",
+    "highlight3": "Because change is not a goal, it's a way of walking differently, every day."
+  },
+  "values": {
+    "title": "Our Values",
+    "items": [
+      {
+        "title": "We believe in care.",
+        "text": "For people, for things, for the planet we share."
+      },
+      {
+        "title": "We believe in trust.",
+        "text": "We're not here to compete. We're here to build community."
+      },
+      {
+        "title": "We believe in action.",
+        "text": "We're not here to decorate speeches. We're here to make things happen."
+      },
+      {
+        "title": "We believe in closeness.",
+        "text": "We don't speak as a brand. We speak like you. And we think with you."
+      }
+    ]
+  }
+}

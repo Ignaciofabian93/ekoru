@@ -4,15 +4,15 @@ import esCL from "./locales/es-CL.json";
 import enUS from "./locales/en-US.json";
 import frCA from "./locales/fr-CA.json";
 
-type FeaturesTranslations = typeof esCL;
+type ContactTranslations = typeof esCL;
 
-const translations: Record<Locale, FeaturesTranslations> = {
+const translations: Record<Locale, ContactTranslations> = {
   "es-CL": esCL,
   "en-US": enUS,
   "fr-CA": frCA,
 };
 
-export function useFeaturesTranslations() {
+export function useContactTranslations() {
   const { locale } = useLocaleStore();
 
   const t = translations[locale];
@@ -22,9 +22,10 @@ export function useFeaturesTranslations() {
     t,
     sectionId: t.sectionId,
     banner: t.banner,
-    explanation: t.explanation,
-    impactSummary: t.impactSummary,
+    description: t.description,
+    form: t.form,
+    messages: t.messages,
   };
 }
 
-export type { FeaturesTranslations };
+export type { ContactTranslations };

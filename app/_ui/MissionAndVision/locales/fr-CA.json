@@ -1,0 +1,59 @@
+{
+  "sectionId": "mission&vision",
+  "banners": {
+    "top": {
+      "title": "CE N'ÉTAIT PAS UNE IDÉE. C'ÉTAIT UNE PRÉOCCUPATION",
+      "description": "Là où beaucoup ont vu des problèmes, nous avons vu une graine"
+    },
+    "bottom": {
+      "title": "QUE VIVRE COMMENCE PAR CE QUE VOUS RESSENTEZ",
+      "description": "Changer comment vous consommez, change comment vous habitez."
+    }
+  },
+  "introText": {
+    "part1": "EKORU n'est pas né d'une idée brillante, il est né d'un malaise réel,",
+    "part2": "et de la conviction qu'oui, il existe une autre façon de vivre. Assez de tant de consommation, tant de déchets, tant de déconnexion.",
+    "part3": "EKORU est une communauté",
+    "part4": "qui n'attend pas que le monde change... elle le change. Nous ne sommes pas parfaits, et cela ne nous intéresse pas de l'être, mais chaque personne qui se joint allume une étincelle. Et ensemble,",
+    "part5": "nous éclairons l'avenir."
+  },
+  "imageAlt": "Icônes représentant notre mission et notre vision",
+  "mission": {
+    "title": "Notre Mission",
+    "part1": "Nous inspirons une autre façon de consommer : plus consciente, plus circulaire et beaucoup plus humaine. Nous sommes ici pour",
+    "highlight1": "transformer le quotidien en impact",
+    "part2": ", l'usagé en trésor, et l'individuel en communauté. Nous voulons que",
+    "highlight2": "chaque personne, chaque objet et chaque décision contribue à une planète plus saine",
+    "part3": "et à une façon de vivre qui ressemble davantage à ce que nous ressentons."
+  },
+  "vision": {
+    "title": "Notre Vision",
+    "part1": "Nous croyons en un monde où",
+    "highlight1": "lâcher prise c'est aussi prendre soin",
+    "part2": ". Où ce qui existe déjà peut briller à nouveau.",
+    "highlight2": "Nous rêvons de faire de la durabilité une habitude quotidienne, collective et circulaire.",
+    "part3": "Non pas comme un fardeau, mais comme une façon plus légère, cohérente et vivante d'habiter. Chez EKORU, nous ne voulons pas le faire pour vous, nous voulons le faire avec vous.",
+    "highlight3": "Parce que le changement n'est pas un but, c'est une façon de marcher différemment, tous les jours."
+  },
+  "values": {
+    "title": "Nos Valeurs",
+    "items": [
+      {
+        "title": "Nous croyons au soin.",
+        "text": "Pour les gens, pour les choses, pour la planète que nous partageons."
+      },
+      {
+        "title": "Nous croyons en la confiance.",
+        "text": "Nous ne sommes pas ici pour rivaliser. Nous sommes ici pour construire une communauté."
+      },
+      {
+        "title": "Nous croyons en l'action.",
+        "text": "Nous ne sommes pas là pour décorer des discours. Nous sommes là pour faire bouger les choses."
+      },
+      {
+        "title": "Nous croyons en la proximité.",
+        "text": "Nous ne parlons pas comme une marque. Nous parlons comme vous. Et nous pensons avec vous."
+      }
+    ]
+  }
+}

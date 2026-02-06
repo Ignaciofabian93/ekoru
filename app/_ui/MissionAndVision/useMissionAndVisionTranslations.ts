@@ -4,15 +4,15 @@ import esCL from "./locales/es-CL.json";
 import enUS from "./locales/en-US.json";
 import frCA from "./locales/fr-CA.json";
 
-type FeaturesTranslations = typeof esCL;
+type MissionAndVisionTranslations = typeof esCL;
 
-const translations: Record<Locale, FeaturesTranslations> = {
+const translations: Record<Locale, MissionAndVisionTranslations> = {
   "es-CL": esCL,
   "en-US": enUS,
   "fr-CA": frCA,
 };
 
-export function useFeaturesTranslations() {
+export function useMissionAndVisionTranslations() {
   const { locale } = useLocaleStore();
 
   const t = translations[locale];
@@ -21,10 +21,13 @@ export function useFeaturesTranslations() {
     locale,
     t,
     sectionId: t.sectionId,
-    banner: t.banner,
-    explanation: t.explanation,
-    impactSummary: t.impactSummary,
+    banners: t.banners,
+    introText: t.introText,
+    imageAlt: t.imageAlt,
+    mission: t.mission,
+    vision: t.vision,
+    values: t.values,
   };
 }
 
-export type { FeaturesTranslations };
+export type { MissionAndVisionTranslations };

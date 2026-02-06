@@ -1,0 +1,30 @@
+{
+  "sectionId": "features",
+  "banner": {
+    "title": "Ejemplos de Productos en EKORU",
+    "description": "Así se verán los productos en nuestra plataforma."
+  },
+  "explanation": {
+    "part1": "Al comprar productos de segunda mano en EKORU, no solo estás ahorrando dinero,",
+    "highlight1": "estás tomando una decisión consciente",
+    "part2": "que beneficia al planeta y a tu bolsillo.",
+    "part3": "Cada producto viene con información detallada sobre su",
+    "highlight2": "impacto ambiental positivo",
+    "part4": ": cuánto CO₂ evitas emitir, cuánta agua ahorras y qué materiales estás reutilizando."
+  },
+  "impactSummary": {
+    "title": "🌍 Impacto de Comprar Segunda Mano",
+    "co2": {
+      "value": "204 kg",
+      "label": "CO₂ ahorrado en estos 2 productos"
+    },
+    "water": {
+      "value": "11,760 L",
+      "label": "Agua ahorrada"
+    },
+    "lifespan": {
+      "value": "100%",
+      "label": "Vida útil extendida"
+    }
+  }
+}

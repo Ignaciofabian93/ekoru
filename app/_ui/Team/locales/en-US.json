@@ -1,0 +1,26 @@
+{
+  "sectionId": "team",
+  "banner": {
+    "title": "A SMALL TEAM. A HUGE INTENTION",
+    "description": "A space built with soul, not with titles."
+  },
+  "members": [
+    {
+      "name": "Ignacio Rodríguez",
+      "role": "Software Engineer",
+      "description": "Keyboard wizard. Coffee fan and lover of difficult bugs.",
+      "summary": "Ignacio is the one who turns our circular craziness into buttons that actually work, screens that actually load, and experiences that don't make you hate technology. He doesn't just develop the app. He listens to it, tests it, breaks it... and puts it back together better. If EKORU were a circular bicycle, Ignacio would be the chain and also the one who greases it."
+    },
+    {
+      "name": "Jorge Conejeros",
+      "role": "Strategist & Connector",
+      "description": "Connector with purpose. Has a thousand notes with things that \"could work\".",
+      "summary": "Jorge is the one who doesn't wait to have everything figured out to start. He proposes half-crazy ideas and still manages to make sense of them. He's not interested in leading from the top, but in pushing from the middle. With more doubts than certainties and more desire than excuses. If EKORU were a bonfire, Jorge would be the one who brings the first sticks, and the one who gathers everyone."
+    }
+  ],
+  "ui": {
+    "clickToSeeMore": "Tap to see more",
+    "clickToGoBack": "Tap to go back",
+    "about": "About"
+  }
+}
