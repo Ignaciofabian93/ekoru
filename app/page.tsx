@@ -1,12 +1,12 @@
-import Contact from "@/ui/contact/contact";
-import Footer from "@/ui/footer/footer";
-import Functionalities from "@/ui/functionalities/functionalities";
-import MissionAndVision from "@/ui/mission&vision/mission&vision";
-import Team from "@/ui/team/team";
-import ScrollProgress from "@/ui/scroll-progress/scroll-progress";
 import Header from "./_ui/Header/Header";
 import Hero from "./_ui/Hero/Hero";
 import About from "./_ui/About/About";
+import ScrollProgress from "./_ui/ScrollProgress/ScrollProgress";
+import Features from "./_ui/Features/Features";
+import EkoruFooter from "./_ui/Footer/Footer";
+import Contact from "./_ui/Contact/Contact";
+import MissionAndVision from "./_ui/MissionAndVission/MissionAndVision";
+import Team from "./_ui/Team/Team";
 
 export default function Home() {
   return (
@@ -15,11 +15,11 @@ export default function Home() {
       <Header />
       <Hero />
       <About />
-      <Functionalities />
+      <Features />
       <MissionAndVision />
       <Team />
       <Contact />
-      <Footer />
+      <EkoruFooter />
     </main>
   );
 }

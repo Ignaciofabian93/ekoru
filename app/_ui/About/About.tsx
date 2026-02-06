@@ -32,7 +32,7 @@ export default function About() {
       className={clsx(
         "bg-gradient-to-b from-white/80 to-neutral-light/30",
         "max-w-6xl",
-        "mx-auto my-16",
+        "mx-auto",
         "p-0 md:p-8",
         "rounded-2xl",
       )}

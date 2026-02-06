@@ -47,10 +47,10 @@ const FloatingLeaf = ({
       className={clsx("absolute pointer-events-none", color, className)}
       initial={{ y: -30, x: 0, rotate: 0, opacity: 0 }}
       animate={{
-        y: [0, 250, 500],
+        y: [0, 400, 800],
         x: sway.x,
         rotate: sway.rotate,
-        opacity: [0, 0.9, 0.7, 0],
+        opacity: [0, 0.4, 0.25, 0],
       }}
       transition={{
         duration,
@@ -71,14 +71,20 @@ const AnimatedBackground = () => (
       className="absolute inset-0 -z-10"
       animate={{
         background: [
-          "linear-gradient(180deg, rgba(34, 197, 94, 0.25) 0%, rgba(240, 253, 244, 1) 40%, rgba(255, 255, 255, 1) 100%)",
-          "linear-gradient(180deg, rgba(16, 185, 129, 0.3) 0%, rgba(236, 253, 245, 1) 40%, rgba(255, 255, 255, 1) 100%)",
-          "linear-gradient(180deg, rgba(20, 184, 166, 0.25) 0%, rgba(240, 253, 250, 1) 40%, rgba(255, 255, 255, 1) 100%)",
-          "linear-gradient(180deg, rgba(34, 197, 94, 0.25) 0%, rgba(240, 253, 244, 1) 40%, rgba(255, 255, 255, 1) 100%)",
+          // Green: rgba(34, 197, 94) → Light green: rgba(134, 239, 172) → Pale green: rgba(240, 253, 244) → White
+          "linear-gradient(180deg, rgba(34, 197, 94, 0.6) 0%, rgba(134, 239, 172, 0.4) 30%, rgba(240, 253, 244, 0.8) 65%, rgba(255, 255, 255, 1) 100%)",
+          // Emerald: rgba(16, 185, 129) → Light emerald: rgba(110, 231, 183) → Pale emerald: rgba(236, 253, 245) → White
+          "linear-gradient(180deg, rgba(16, 185, 129, 0.65) 0%, rgba(110, 231, 183, 0.45) 30%, rgba(236, 253, 245, 0.8) 65%, rgba(255, 255, 255, 1) 100%)",
+          // Teal: rgba(20, 184, 166) → Light teal: rgba(94, 234, 212) → Pale teal: rgba(240, 253, 250) → White
+          "linear-gradient(180deg, rgba(20, 184, 166, 0.6) 0%, rgba(94, 234, 212, 0.4) 30%, rgba(240, 253, 250, 0.8) 65%, rgba(255, 255, 255, 1) 100%)",
+          // Forest green: rgba(22, 163, 74) → Light green: rgba(134, 239, 172) → Pale green: rgba(220, 252, 231) → White
+          "linear-gradient(180deg, rgba(22, 163, 74, 0.65) 0%, rgba(134, 239, 172, 0.45) 30%, rgba(220, 252, 231, 0.8) 65%, rgba(255, 255, 255, 1) 100%)",
+          // Green: rgba(34, 197, 94) → Light green: rgba(134, 239, 172) → Pale green: rgba(240, 253, 244) → White
+          "linear-gradient(180deg, rgba(34, 197, 94, 0.6) 0%, rgba(134, 239, 172, 0.4) 30%, rgba(240, 253, 244, 0.8) 65%, rgba(255, 255, 255, 1) 100%)",
         ],
       }}
       transition={{
-        duration: 6,
+        duration: 8,
         repeat: Infinity,
         ease: "easeInOut",
       }}
@@ -156,9 +162,9 @@ export default function Hero() {
     <section
       className={clsx(
         "relative flex flex-col items-center justify-center",
-        "min-h-[80vh] w-full",
+        "h-dvh w-full",
         "text-center",
-        "px-4 py-10",
+        "px-4 py-4",
         "overflow-hidden",
       )}
     >
@@ -384,7 +390,7 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 w-full max-w-5xl mx-auto flex flex-col items-center">
+      <div className="relative z-10 w-full max-w-5xl mx-auto flex flex-col items-center drop-shadow-sm">
         {/* Logo */}
         <Logo />
 
